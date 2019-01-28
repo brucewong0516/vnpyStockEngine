@@ -15,6 +15,7 @@
       <option name="ignoredIdentifiers">
         <list>
           <option value="examples.Single_Strategy.runOptimization_template.strategy_doubleMA1" />
+          <option value="data_process.save_stock_list.sh_base_define" />
         </list>
       </option>
     </inspection_tool>

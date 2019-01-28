@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0cedd384-9834-4053-8fa1-8f5776922f81" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test_file/读取tick数据.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/runBacktesing_template.py" beforeDir="false" afterPath="$PROJECT_DIR$/examples/runBacktesing_template.py" afterDir="false" />
-    </list>
+    <list default="true" id="0cedd384-9834-4053-8fa1-8f5776922f81" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,7 +9,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.42988366">
+    <splitter split-orientation="horizontal" split-proportion="0.5339865">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
@@ -25,13 +21,70 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/backtest/object.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="85">
-                  <caret line="99" column="26" selection-start-line="99" selection-start-column="26" selection-end-line="99" selection-end-column="26" />
+                <state relative-caret-position="2714">
+                  <caret line="118" column="20" selection-start-line="118" selection-start-column="20" selection-end-line="118" selection-end-column="20" />
                   <folding>
                     <element signature="e#44#56#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/data_process/sh_stock_process.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-71">
+                  <caret line="85" column="34" lean-forward="true" selection-start-line="85" selection-start-column="34" selection-end-line="85" selection-end-column="34" />
+                  <folding>
+                    <element signature="e#0#9#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/test_file/从聚宽下载指数日线数据样例.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1081">
+                  <caret line="47" column="37" selection-start-line="47" selection-start-column="37" selection-end-line="47" selection-end-column="37" />
+                  <folding>
+                    <element signature="e#0#16#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/backtest/eventEngine.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="92">
+                  <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+                  <folding>
+                    <element signature="e#0#30#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/data_process/sh_base_define.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="391">
+                  <caret line="17" column="34" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/data_process/save_stock_list.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="207">
+                  <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+                  <folding>
+                    <element signature="e#0#19#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -40,7 +93,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/backtest/template.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-550">
+                <state relative-caret-position="826">
                   <caret line="53" column="17" selection-start-line="53" selection-start-column="10" selection-end-line="53" selection-end-column="17" />
                 </state>
               </provider>
@@ -59,11 +112,11 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/examples/runBacktesing_template.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="453">
-                  <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+                <state relative-caret-position="827">
+                  <caret line="43" selection-start-line="43" selection-end-line="43" />
                   <folding>
                     <element signature="e#40#51#0" expanded="true" />
                   </folding>
@@ -71,11 +124,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/backtest/backtestEngine.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="296">
-                  <caret line="207" column="26" selection-start-line="207" selection-start-column="26" selection-end-line="207" selection-end-column="26" />
+                <state relative-caret-position="-23">
+                  <caret line="3" selection-start-line="3" selection-end-line="3" />
                   <folding>
                     <element signature="e#57#66#0" expanded="true" />
                   </folding>
@@ -86,8 +139,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/examples/runOptimization_template.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="545">
-                  <caret line="28" column="35" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
+                <state relative-caret-position="345">
+                  <caret line="15" column="45" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
                   <folding>
                     <element signature="e#43#117#0" expanded="true" />
                   </folding>
@@ -98,7 +151,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/backtest/evaluation.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="4163">
+                <state relative-caret-position="4347">
                   <caret line="189" column="41" selection-start-line="189" selection-start-column="41" selection-end-line="189" selection-end-column="41" />
                   <folding>
                     <element signature="e#41#50#0" expanded="true" />
@@ -120,8 +173,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>self.rate</find>
-      <find>rate_commission</find>
       <find>self.strategy.pos</find>
       <find>offset</find>
       <find>buyBestCrossPrice</find>
@@ -150,6 +201,8 @@
       <find>totalDays</find>
       <find>runParallelOptimization</find>
       <find>l</find>
+      <find>SH</find>
+      <find>bid</find>
     </findStrings>
     <replaceStrings>
       <replace>_read</replace>
@@ -171,6 +224,7 @@
       <replace>aimFreq</replace>
       <replace>barManagerLarge</replace>
       <replace>op_list</replace>
+      <replace>ask</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -209,6 +263,12 @@
         <option value="$PROJECT_DIR$/examples/runBacktesing_template.py" />
         <option value="$PROJECT_DIR$/backtest/backtestEngine.py" />
         <option value="$PROJECT_DIR$/test_file/读取tick数据.py" />
+        <option value="$PROJECT_DIR$/data_process/get_stock_list.py" />
+        <option value="$PROJECT_DIR$/backtest/eventEngine.py" />
+        <option value="$PROJECT_DIR$/data_process/save_stock_list.py" />
+        <option value="$PROJECT_DIR$/data_process/sh_base_define.py" />
+        <option value="$PROJECT_DIR$/data_process/SH600141.csv" />
+        <option value="$PROJECT_DIR$/data_process/sh_stock_process.py" />
       </list>
     </option>
   </component>
@@ -237,6 +297,11 @@
               <item name="vnpyStockEngine" type="b2602c69:ProjectViewProjectNode" />
               <item name="vnpyStockEngine" type="462c0819:PsiDirectoryNode" />
               <item name="backtest" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vnpyStockEngine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vnpyStockEngine" type="462c0819:PsiDirectoryNode" />
+              <item name="data_process" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="vnpyStockEngine" type="b2602c69:ProjectViewProjectNode" />
@@ -288,8 +353,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.runBacktesing_template (1)">
-    <configuration name="从聚宽下载指数日线数据样例2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.sh_stock_process">
+    <configuration name="get_stock_list" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="develop" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -297,53 +362,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_file" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/data_process" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_file/从聚宽下载指数日线数据样例2.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="backtestEngine" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="develop" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/backtest" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/backtest/backtestEngine.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="evaluation" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="develop" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/backtest" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/backtest/evaluation.py" />
+      <option name="SCRIPT_NAME" value="H:\vnpyStockEngine\data_process\save_stock_list.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -373,7 +396,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="runOptimization_template (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="save_stock_list" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="develop" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -381,11 +404,53 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/examples" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/data_process" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/examples/runOptimization_template.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/data_process/save_stock_list.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="sh_base_define" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="develop" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/data_process" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/data_process/sh_base_define.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="sh_stock_process" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="develop" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/data_process" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/data_process/sh_stock_process.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -417,11 +482,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.sh_stock_process" />
+        <item itemvalue="Python.save_stock_list" />
+        <item itemvalue="Python.get_stock_list" />
+        <item itemvalue="Python.sh_base_define" />
         <item itemvalue="Python.读取tick数据" />
-        <item itemvalue="Python.runOptimization_template (1)" />
-        <item itemvalue="Python.backtestEngine" />
-        <item itemvalue="Python.从聚宽下载指数日线数据样例2" />
-        <item itemvalue="Python.evaluation" />
       </list>
     </recent_temporary>
   </component>
@@ -451,18 +516,18 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13962065" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13962065" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.30477223" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.30477223" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32928178" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3286334" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.329718" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.329718" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.329718" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.3286334" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -490,17 +555,6 @@
     </layout-to-restore>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/.PyCharmCE2018.3/system/python_stubs/2095415468/itertools.py" />
-    <entry file="file://$PROJECT_DIR$/testformultiprocess.py" />
-    <entry file="file://$PROJECT_DIR$/multiprocessingqeue.py" />
-    <entry file="file://$PROJECT_DIR$/multiprocessingpipe.py" />
-    <entry file="file://$PROJECT_DIR$/multiprocessing_process.py" />
-    <entry file="file://$PROJECT_DIR$/multiprocessingpool.py" />
-    <entry file="file://$PROJECT_DIR$/multiprocessinglock.py" />
-    <entry file="file://$PROJECT_DIR$/test.py" />
-    <entry file="file://$PROJECT_DIR$/examples/Single_Strategy/logs/DoubleMA1Strategy_20190118_143550/Evaluation.txt" />
-    <entry file="file://$PROJECT_DIR$/examples/Single_Strategy/logs/DoubleMA1Strategy_20190118_143550/df_master.csv" />
-    <entry file="file://$PROJECT_DIR$/examples/Single_Strategy/logs/DoubleMA1Strategy_20190118_143550/df_daily.csv" />
     <entry file="file://$PROJECT_DIR$/examples/Single_Strategy/logs/DoubleMA1Strategy_20190118_143550/TradeRecord.csv" />
     <entry file="file://$USER_HOME$/.PyCharmCE2018.3/system/python_stubs/102371791/builtins.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -558,16 +612,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_file/从聚宽下载指数日线数据样例.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="6" selection-end-line="49" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/examples/logs/test_20190125_103143/TradeRecord.csv" />
     <entry file="file://$PROJECT_DIR$/examples/logs/test_20190125_103234/TradeRecord.csv" />
     <entry file="file://$PROJECT_DIR$/examples/logs/test_20190125_103437/TradeRecord.csv" />
@@ -587,27 +631,18 @@
     <entry file="file://$PROJECT_DIR$/examples/logs/test_20190125_135511/TradeRecord.csv" />
     <entry file="file://$PROJECT_DIR$/examples/logs/test_20190125_140105/TradeRecord.csv" />
     <entry file="file://$PROJECT_DIR$/examples/logs/test_20190125_141257/TradeRecord.csv" />
-    <entry file="file://$PROJECT_DIR$/backtest/evaluation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4163">
-          <caret line="189" column="41" selection-start-line="189" selection-start-column="41" selection-end-line="189" selection-end-column="41" />
-          <folding>
-            <element signature="e#41#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/data_process/stock_list.csv" />
+    <entry file="file://$PROJECT_DIR$/data_process/test2.csv" />
+    <entry file="file://$PROJECT_DIR$/data_process/test.csv" />
+    <entry file="file://$PROJECT_DIR$/data_process/SH603826.csv" />
+    <entry file="file://$PROJECT_DIR$/data_process/temp/trade_data2.csv">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_file/读取tick数据.py">
+    <entry file="file://$PROJECT_DIR$/data_process/trade_data.csv" />
+    <entry file="file://$PROJECT_DIR$/data_process/SH600141.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backtest/template.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-550">
-          <caret line="53" column="17" selection-start-line="53" selection-start-column="10" selection-end-line="53" selection-end-column="17" />
+        <state relative-caret-position="412">
+          <caret line="291" column="28" lean-forward="true" selection-start-line="291" selection-end-line="292" />
         </state>
       </provider>
     </entry>
@@ -620,40 +655,111 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/backtest/object.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="99" column="26" selection-start-line="99" selection-start-column="26" selection-end-line="99" selection-end-column="26" />
+        <state relative-caret-position="2714">
+          <caret line="118" column="20" selection-start-line="118" selection-start-column="20" selection-end-line="118" selection-end-column="20" />
           <folding>
             <element signature="e#44#56#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backtest/backtestEngine.py">
+    <entry file="file://$PROJECT_DIR$/test_file/从聚宽下载指数日线数据样例.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="207" column="26" selection-start-line="207" selection-start-column="26" selection-end-line="207" selection-end-column="26" />
+        <state relative-caret-position="1081">
+          <caret line="47" column="37" selection-start-line="47" selection-start-column="37" selection-end-line="47" selection-end-column="37" />
           <folding>
-            <element signature="e#57#66#0" expanded="true" />
+            <element signature="e#0#16#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backtest/eventEngine.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/examples/runOptimization_template.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="545">
-          <caret line="28" column="35" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
+        <state relative-caret-position="345">
+          <caret line="15" column="45" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
           <folding>
             <element signature="e#43#117#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/backtest/evaluation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4347">
+          <caret line="189" column="41" selection-start-line="189" selection-start-column="41" selection-end-line="189" selection-end-column="41" />
+          <folding>
+            <element signature="e#41#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/examples/runBacktesing_template.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+        <state relative-caret-position="827">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
           <folding>
             <element signature="e#40#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backtest/template.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="826">
+          <caret line="53" column="17" selection-start-line="53" selection-start-column="10" selection-end-line="53" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data_process/save_stock_list.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data_process/sh_base_define.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="17" column="34" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_file/读取tick数据.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data_process/sh_stock_process.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-71">
+          <caret line="85" column="34" lean-forward="true" selection-start-line="85" selection-start-column="34" selection-end-line="85" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backtest/backtestEngine.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-23">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <element signature="e#57#66#0" expanded="true" />
           </folding>
         </state>
       </provider>
