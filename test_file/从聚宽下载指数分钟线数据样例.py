@@ -41,7 +41,8 @@ def wash_data(df):
 
 if __name__ == '__main__':
     # 定义数据库
-    client = pymongo.MongoClient("192.168.0.107", port=27017)
+    # client = pymongo.MongoClient("192.168.0.107", port=27017)
+    client = pymongo.MongoClient(port=27017)
     db = client['stock_1min']
     collection = db['000001.XSHG']
     # collection.create_index([("start_time", pymongo.ASCENDING)])

@@ -19,7 +19,7 @@ from backtest.evaluation import Evaluation    # 评价指标计算对象
 class BacktestingEngine(object):
 
     TICK_MODE = 'tick'  # 数据模式，逐Tick回测
-    BAR_MODE = 'bar'  # 数据模式，逐Bar回测
+    BAR_MODE = 'bar'    # 数据模式，逐Bar回测
 
     # ----------------------------------------------------------------------
     def __init__(self):
