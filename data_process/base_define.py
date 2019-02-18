@@ -15,7 +15,16 @@
 上海成交买卖标识, 'B'为买, 'S'为卖, 'N'为未知一般出现于集合竞价其间的撮合成交
 """
 
-file_address_base = r'g:\20190124\shreportdata'
+shfile_address_base = r'f:\data\{}\shreportdata'
+szfile_address_base = r'f:\data\{}\szreportdata'
+date_list = ['20181224', '20181225', '20181226', '20181227', '20181228',
+             '20190102', '20190103', '20190104', '20190107', '20190108',
+             '20190109', '20190110', '20190111', '20190114', '20190115',
+             '20190116', '20190117', '20190118', '20190121', '20190122',
+             '20190123', '20190124', '20190125', '20190128', '20190129',
+             '20190130', '20190131', '20190201']
 # file_address = r'g:\20190124\shreportdata\shreport0.csv'
-trade_data_base = r'h:\vnpyStockEngine\data_process\temp'
+trade_shdata_base = r'h:\vnpyStockEngine\data_process\sh_temp'
+trade_szdata_base = r'h:\vnpyStockEngine\data_process\sz_temp'
+
 stock_list_address = r'h:\vnpyStockEngine\data_process\stock_list.pkl'

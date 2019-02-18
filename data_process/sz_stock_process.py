@@ -7,14 +7,15 @@ import pymongo
 import datetime
 import warnings
 from multiprocessing.dummy import Pool
-from data_process.base_define import trade_data_base, stock_list_address
+from data_process.save_shstock_list import save_data
+from data_process.base_define import shfile_address_base, date_list, stock_list_address, trade_shdata_base
 warnings.filterwarnings('ignore')
 
 
 def set_time_df(hour, count):
     """根据小时和分钟设定一个df"""
     if hour == 9:
-        df = pd.DataFrame(np.arange(count,60), index=count * [hour], columns=['minute'])
+        df = pd.DataFrame(np.arange(count, 60), index=count * [hour], columns=['minute'])
     else:
         df = pd.DataFrame(np.arange(count), index=count*[hour], columns=['minute'])
     df['hour'] = df.index.values
@@ -136,6 +137,9 @@ def wash_data(stk_data):
 def multi_wash(stock_list, data_sets):
     pool = Pool(processes=4)
     res_list = []
+    # 定义数据库
+    client = pymongo.MongoClient(port=27017)
+    db = client['stock_1tick']
     for i in range(len(stock_list)):
         stk = stock_list[i]
         data = data_sets.loc[stk]
@@ -149,27 +153,25 @@ def multi_wash(stock_list, data_sets):
         if data_list:
             collection.insert_many(data_list)
             print('saved {} data done'.format(stock_list[j]))
+            client.close()
 
 
 if __name__ == '__main__':
     # --------------------------------------------------------------------------------------------------------------
-    # 定义数据库
-    client = pymongo.MongoClient(port=27017)
-    db = client['stock_1tick']
-    # 遍历文件
-    file_list = os.listdir(trade_data_base)
-    dfs = []
-    for file_name in file_list:
-        trade_data_address = trade_data_base + os.sep + file_name
-        df = pd.read_csv(trade_data_address, index_col=1)
-        dfs.append(df)
-    df_last = pd.concat(dfs, axis=0)
-    df_last.sort_values(by=['时间'], ascending=True)
-    with open(stock_list_address, 'rb') as f:
-        stock_list = pickle.load(f)
-    # 过滤已经完成数据存储的股票
-    stock_list = [x for x in stock_list if str(x[2:]) + '.XSHG' not in db.collection_names()]
-    # 统计花销时间
-    t0 = time.time()
-    multi_wash(stock_list, df_last)
-    print('解析文件{}花费时间{}'.format(trade_data_address, time.time()-t0))  # 总计26096s
+
+    for date in date_list:
+        print(date)
+        stock_list = save_data(date)
+        # 遍历文件
+        file_list = os.listdir(trade_shdata_base)
+        dfs = []
+        for file_name in file_list:
+            trade_data_address = trade_shdata_base + os.sep + file_name
+            df = pd.read_csv(trade_data_address, index_col=1)
+            dfs.append(df)
+        df_last = pd.concat(dfs, axis=0)
+        df_last.sort_values(by=['时间'], ascending=True)
+        # 统计花销时间
+        t0 = time.time()
+        multi_wash(stock_list, df_last)
+        print('解析文件{}花费时间{}'.format(trade_data_address, time.time()-t0))  # 总计26096s

@@ -2,11 +2,90 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0cedd384-9834-4053-8fa1-8f5776922f81" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/backtest/backtestEngine.py" beforeDir="false" afterPath="$PROJECT_DIR$/backtest/backtestEngine.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JZpyapi/JZpyapi/apis/tick_report.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JZpyapi/JZpyapi/pb/quote_push_pb2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JZpyapi/JZpyapi/pb/upic_pb2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JZpyapi/rpc_protos/src/quote_push.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JZpyapi/rpc_protos/src/upic.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_process/get_stock_pool.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_process/get_stock_tick.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_process/log_auth.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_process/save_szstock_list.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_process/sz_stock_process.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_process/读取公司tick数据测试.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JZpyapi/JZpyapi/apis/ctp.py" beforeDir="false" afterPath="$PROJECT_DIR$/JZpyapi/JZpyapi/apis/ctp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JZpyapi/JZpyapi/apis/index.py" beforeDir="false" afterPath="$PROJECT_DIR$/JZpyapi/JZpyapi/apis/index.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JZpyapi/JZpyapi/apis/login.py" beforeDir="false" afterPath="$PROJECT_DIR$/JZpyapi/JZpyapi/apis/login.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JZpyapi/JZpyapi/apis/report.py" beforeDir="false" afterPath="$PROJECT_DIR$/JZpyapi/JZpyapi/apis/report.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JZpyapi/JZpyapi/apis/xtp.py" beforeDir="false" afterPath="$PROJECT_DIR$/JZpyapi/JZpyapi/apis/xtp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JZpyapi/JZpyapi/asyncbase/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/JZpyapi/JZpyapi/asyncbase/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JZpyapi/JZpyapi/asyncbase/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/JZpyapi/JZpyapi/asyncbase/client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JZpyapi/JZpyapi/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/JZpyapi/JZpyapi/client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JZpyapi/JZpyapi/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/JZpyapi/JZpyapi/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JZpyapi/JZpyapi/mapping.py" beforeDir="false" afterPath="$PROJECT_DIR$/JZpyapi/JZpyapi/mapping.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JZpyapi/JZpyapi/parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/JZpyapi/JZpyapi/parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JZpyapi/JZpyapi/pb/auth_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/JZpyapi/JZpyapi/pb/auth_pb2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JZpyapi/JZpyapi/pb/base_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/JZpyapi/JZpyapi/pb/base_pb2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JZpyapi/JZpyapi/pb/big_data_algorithm_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/JZpyapi/JZpyapi/pb/big_data_algorithm_pb2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JZpyapi/JZpyapi/pb/client_store_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/JZpyapi/JZpyapi/pb/client_store_pb2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JZpyapi/JZpyapi/pb/cloud_soft_oa_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/JZpyapi/JZpyapi/pb/cloud_soft_oa_pb2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JZpyapi/JZpyapi/pb/cloud_stock_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/JZpyapi/JZpyapi/pb/cloud_stock_pb2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JZpyapi/JZpyapi/pb/common_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/JZpyapi/JZpyapi/pb/common_pb2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JZpyapi/JZpyapi/pb/data_download_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/JZpyapi/JZpyapi/pb/data_download_pb2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JZpyapi/JZpyapi/pb/f10_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/JZpyapi/JZpyapi/pb/f10_pb2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JZpyapi/JZpyapi/pb/finance_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/JZpyapi/JZpyapi/pb/finance_pb2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JZpyapi/JZpyapi/pb/ft_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/JZpyapi/JZpyapi/pb/ft_pb2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JZpyapi/JZpyapi/pb/history_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/JZpyapi/JZpyapi/pb/history_pb2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JZpyapi/JZpyapi/pb/index_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/JZpyapi/JZpyapi/pb/index_pb2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JZpyapi/JZpyapi/pb/investment_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/JZpyapi/JZpyapi/pb/investment_pb2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JZpyapi/JZpyapi/pb/product_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/JZpyapi/JZpyapi/pb/product_pb2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JZpyapi/JZpyapi/pb/push_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/JZpyapi/JZpyapi/pb/push_pb2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JZpyapi/JZpyapi/pb/quant_proxy_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/JZpyapi/JZpyapi/pb/quant_proxy_pb2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JZpyapi/JZpyapi/pb/rank_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/JZpyapi/JZpyapi/pb/rank_pb2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JZpyapi/JZpyapi/pb/register_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/JZpyapi/JZpyapi/pb/register_pb2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JZpyapi/JZpyapi/pb/report_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/JZpyapi/JZpyapi/pb/report_pb2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JZpyapi/JZpyapi/pb/topic_invest_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/JZpyapi/JZpyapi/pb/topic_invest_pb2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JZpyapi/JZpyapi/pb/user_collect_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/JZpyapi/JZpyapi/pb/user_collect_pb2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JZpyapi/JZpyapi/pb/valuehunter_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/JZpyapi/JZpyapi/pb/valuehunter_pb2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JZpyapi/JZpyapi/pb/warning_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/JZpyapi/JZpyapi/pb/warning_pb2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JZpyapi/JZpyapi/pb/web_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/JZpyapi/JZpyapi/pb/web_pb2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JZpyapi/JZpyapi/pb/xtp_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/JZpyapi/JZpyapi/pb/xtp_pb2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JZpyapi/JZpyapi/pb/zero_script_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/JZpyapi/JZpyapi/pb/zero_script_pb2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JZpyapi/JZpyapi/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/JZpyapi/JZpyapi/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JZpyapi/rpc_protos/src/auth.proto" beforeDir="false" afterPath="$PROJECT_DIR$/JZpyapi/rpc_protos/src/auth.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JZpyapi/rpc_protos/src/base.proto" beforeDir="false" afterPath="$PROJECT_DIR$/JZpyapi/rpc_protos/src/base.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JZpyapi/rpc_protos/src/big_data_algorithm.proto" beforeDir="false" afterPath="$PROJECT_DIR$/JZpyapi/rpc_protos/src/big_data_algorithm.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JZpyapi/rpc_protos/src/client_store.proto" beforeDir="false" afterPath="$PROJECT_DIR$/JZpyapi/rpc_protos/src/client_store.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JZpyapi/rpc_protos/src/cloud_soft_oa.proto" beforeDir="false" afterPath="$PROJECT_DIR$/JZpyapi/rpc_protos/src/cloud_soft_oa.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JZpyapi/rpc_protos/src/cloud_stock.proto" beforeDir="false" afterPath="$PROJECT_DIR$/JZpyapi/rpc_protos/src/cloud_stock.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JZpyapi/rpc_protos/src/common.proto" beforeDir="false" afterPath="$PROJECT_DIR$/JZpyapi/rpc_protos/src/common.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JZpyapi/rpc_protos/src/data_download.proto" beforeDir="false" afterPath="$PROJECT_DIR$/JZpyapi/rpc_protos/src/data_download.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JZpyapi/rpc_protos/src/f10.proto" beforeDir="false" afterPath="$PROJECT_DIR$/JZpyapi/rpc_protos/src/f10.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JZpyapi/rpc_protos/src/finance.proto" beforeDir="false" afterPath="$PROJECT_DIR$/JZpyapi/rpc_protos/src/finance.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JZpyapi/rpc_protos/src/ft.proto" beforeDir="false" afterPath="$PROJECT_DIR$/JZpyapi/rpc_protos/src/ft.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JZpyapi/rpc_protos/src/history.proto" beforeDir="false" afterPath="$PROJECT_DIR$/JZpyapi/rpc_protos/src/history.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JZpyapi/rpc_protos/src/index.proto" beforeDir="false" afterPath="$PROJECT_DIR$/JZpyapi/rpc_protos/src/index.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JZpyapi/rpc_protos/src/investment.proto" beforeDir="false" afterPath="$PROJECT_DIR$/JZpyapi/rpc_protos/src/investment.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JZpyapi/rpc_protos/src/product.proto" beforeDir="false" afterPath="$PROJECT_DIR$/JZpyapi/rpc_protos/src/product.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JZpyapi/rpc_protos/src/push.proto" beforeDir="false" afterPath="$PROJECT_DIR$/JZpyapi/rpc_protos/src/push.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JZpyapi/rpc_protos/src/quant_proxy.proto" beforeDir="false" afterPath="$PROJECT_DIR$/JZpyapi/rpc_protos/src/quant_proxy.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JZpyapi/rpc_protos/src/rank.proto" beforeDir="false" afterPath="$PROJECT_DIR$/JZpyapi/rpc_protos/src/rank.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JZpyapi/rpc_protos/src/register.proto" beforeDir="false" afterPath="$PROJECT_DIR$/JZpyapi/rpc_protos/src/register.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JZpyapi/rpc_protos/src/report.proto" beforeDir="false" afterPath="$PROJECT_DIR$/JZpyapi/rpc_protos/src/report.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JZpyapi/rpc_protos/src/topic_invest.proto" beforeDir="false" afterPath="$PROJECT_DIR$/JZpyapi/rpc_protos/src/topic_invest.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JZpyapi/rpc_protos/src/user_collect.proto" beforeDir="false" afterPath="$PROJECT_DIR$/JZpyapi/rpc_protos/src/user_collect.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JZpyapi/rpc_protos/src/valuehunter.proto" beforeDir="false" afterPath="$PROJECT_DIR$/JZpyapi/rpc_protos/src/valuehunter.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JZpyapi/rpc_protos/src/warning.proto" beforeDir="false" afterPath="$PROJECT_DIR$/JZpyapi/rpc_protos/src/warning.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JZpyapi/rpc_protos/src/web.proto" beforeDir="false" afterPath="$PROJECT_DIR$/JZpyapi/rpc_protos/src/web.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JZpyapi/rpc_protos/src/xtp.proto" beforeDir="false" afterPath="$PROJECT_DIR$/JZpyapi/rpc_protos/src/xtp.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JZpyapi/rpc_protos/src/zero_script.proto" beforeDir="false" afterPath="$PROJECT_DIR$/JZpyapi/rpc_protos/src/zero_script.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JZpyapi/scripts/pull_quotation.py" beforeDir="false" afterPath="$PROJECT_DIR$/JZpyapi/scripts/pull_quotation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_process/save_stock_list.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_process/save_shstock_list.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_process/sh_base_define.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_process/base_define.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data_process/sh_stock_process.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_process/sh_stock_process.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data_process/stock_list.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/data_process/stock_list.pkl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_file/从聚宽下载指数分钟线数据样例.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_file/从聚宽下载指数分钟线数据样例.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_file/从聚宽下载指数日线数据样例2.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_file/从聚宽下载指数日线数据样例2.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,101 +94,17 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.6570729">
+    <splitter split-orientation="horizontal" split-proportion="0.33060968">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/backtest/object.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="361">
-                  <caret line="120" column="39" lean-forward="true" selection-start-line="120" selection-start-column="39" selection-end-line="120" selection-end-column="39" />
-                  <folding>
-                    <element signature="e#44#56#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/data_process/sh_stock_process.py">
+            <entry file="file://$PROJECT_DIR$/data_process/sz_stock_process.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="278">
-                  <caret line="147" column="55" lean-forward="true" selection-start-line="147" selection-start-column="55" selection-end-line="147" selection-end-column="55" />
+                <state relative-caret-position="185">
+                  <caret line="86" column="5" selection-start-line="86" selection-start-column="5" selection-end-line="86" selection-end-column="5" />
                   <folding>
                     <element signature="e#0#9#0" expanded="true" />
                   </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/test_file/从聚宽下载指数分钟线数据样例.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="85">
-                  <caret line="44" column="17" lean-forward="true" selection-start-line="44" selection-start-column="17" selection-end-line="44" selection-end-column="17" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/test_file/从聚宽下载指数日线数据样例2.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="481">
-                  <caret line="48" column="31" selection-start-line="48" selection-start-column="31" selection-end-line="48" selection-end-column="31" />
-                  <folding>
-                    <element signature="e#0#16#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/backtest/eventEngine.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-874">
-                  <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
-                  <folding>
-                    <element signature="e#0#30#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/data_process/sh_base_define.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="391">
-                  <caret line="17" column="34" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/data_process/save_stock_list.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="322">
-                  <caret line="14" column="21" lean-forward="true" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
-                  <folding>
-                    <element signature="e#0#19#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/backtest/template.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="826">
-                  <caret line="53" column="17" selection-start-line="53" selection-start-column="10" selection-end-line="53" selection-end-column="17" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/test_file/读取tick数据.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="230">
-                  <caret line="11" selection-start-line="11" selection-end-line="11" />
                 </state>
               </provider>
             </entry>
@@ -118,49 +113,13 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/examples/runBacktesing_template.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="827">
-                  <caret line="43" selection-start-line="43" selection-end-line="43" />
-                  <folding>
-                    <element signature="e#40#51#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/backtest/backtestEngine.py">
+            <entry file="file://$PROJECT_DIR$/data_process/get_stock_tick.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="391">
-                  <caret line="21" column="37" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="37" />
+                <state relative-caret-position="1049">
+                  <caret line="105" selection-start-line="105" selection-end-line="105" />
                   <folding>
-                    <element signature="e#57#66#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/examples/runOptimization_template.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="345">
-                  <caret line="15" column="45" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
-                  <folding>
-                    <element signature="e#43#117#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/backtest/evaluation.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="4347">
-                  <caret line="189" column="41" selection-start-line="189" selection-start-column="41" selection-end-line="189" selection-end-column="41" />
-                  <folding>
-                    <element signature="e#41#50#0" expanded="true" />
+                    <element signature="e#0#19#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -179,36 +138,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>self.strategy.pos</find>
-      <find>offset</find>
-      <find>buyBestCrossPrice</find>
-      <find>direction</find>
-      <find>self.barManagerDay</find>
-      <find>order.price</find>
-      <find>self.type_num</find>
-      <find>trading</find>
-      <find>self.inited</find>
-      <find>ArrayManager</find>
-      <find>buy</find>
-      <find>onBar</find>
-      <find>onXminBar</find>
-      <find>xmin</find>
-      <find>xminBar</find>
-      <find>arrayManagerMin</find>
-      <find>arrayManagerDay</find>
-      <find>onDayBar</find>
-      <find>lowerFreq</find>
-      <find>BarManager</find>
-      <find>arrayManager</find>
-      <find>arrayManagerLarge</find>
-      <find>barManagerDay</find>
-      <find>self.dt</find>
-      <find>Evaluation</find>
-      <find>totalDays</find>
-      <find>runParallelOptimization</find>
-      <find>l</find>
-      <find>SH</find>
-      <find>bid</find>
+      <find>_send_msg</find>
+      <find>self._send_msg</find>
+      <find>SerializeToString</find>
+      <find>_root_msg</find>
+      <find>report_msg</find>
+      <find>root</find>
+      <find>root_msg</find>
+      <find>self.seq</find>
+      <find>xtp_enum_event</find>
+      <find>send_message_class</find>
+      <find>event</find>
+      <find>history_root</find>
+      <find>xtp_root_msg</find>
+      <find>history_root_msg</find>
+      <find>report</find>
+      <find>history</find>
+      <find>sync_request</find>
+      <find>on_response</find>
+      <find>seq</find>
+      <find>enum_history_report_req</find>
+      <find>s_report_array_result_msg</find>
+      <find>s_report_result_msg</find>
+      <find>xtp_insert_order_req</find>
+      <find>report_data</find>
+      <find>parse_response</find>
+      <find>recv_message_class</find>
+      <find>report_data_rep_msg</find>
+      <find>wrap_in_history_root</find>
+      <find>O</find>
+      <find>ask</find>
     </findStrings>
     <replaceStrings>
       <replace>_read</replace>
@@ -231,6 +190,8 @@
       <replace>barManagerLarge</replace>
       <replace>op_list</replace>
       <replace>ask</replace>
+      <replace>DO</replace>
+      <replace>sell</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -239,52 +200,66 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/examples/Multi_Strategy/runMultiBacktesing_1.py" />
-        <option value="$PROJECT_DIR$/backtest/ctaBacktesting_multi.py" />
-        <option value="$PROJECT_DIR$/multiprocessing_process.py" />
-        <option value="$PROJECT_DIR$/multiprocessingpool.py" />
-        <option value="$PROJECT_DIR$/testformultiprocess.py" />
-        <option value="$PROJECT_DIR$/multiprocessingqeue.py" />
-        <option value="$PROJECT_DIR$/multiprocessingpipe.py" />
-        <option value="$PROJECT_DIR$/multiprocessinglock.py" />
-        <option value="$PROJECT_DIR$/test.py" />
-        <option value="$PROJECT_DIR$/backtest/ctaBacktestingMulti.py" />
-        <option value="$PROJECT_DIR$/examples/Single_Strategy/strategy_doubleMA1.py" />
-        <option value="$PROJECT_DIR$/examples/Single_Strategy/runBacktesingTemplate.py" />
-        <option value="$PROJECT_DIR$/backtest/vtConstant.py" />
-        <option value="$PROJECT_DIR$/backtest/ctaTemplate.py" />
-        <option value="$PROJECT_DIR$/backtest/vtObject.py" />
-        <option value="$PROJECT_DIR$/backtest/ctaBacktesting.py" />
-        <option value="$PROJECT_DIR$/test_file/mongo数据读取测试.py" />
-        <option value="$PROJECT_DIR$/examples/Single_Strategy/runOptimization_template.py" />
-        <option value="$PROJECT_DIR$/examples/Single_Strategy/runBacktesing_template.py" />
-        <option value="$PROJECT_DIR$/test_file/从聚宽下载指数日线数据样例.py" />
-        <option value="$PROJECT_DIR$/backtest/constant.py" />
-        <option value="$PROJECT_DIR$/backtest/object.py" />
-        <option value="$PROJECT_DIR$/backtest/evaluation.py" />
         <option value="$PROJECT_DIR$/examples/runOptimization_template.py" />
         <option value="$PROJECT_DIR$/backtest/template.py" />
         <option value="$PROJECT_DIR$/examples/runBacktesing_template.py" />
         <option value="$PROJECT_DIR$/test_file/读取tick数据.py" />
         <option value="$PROJECT_DIR$/data_process/get_stock_list.py" />
         <option value="$PROJECT_DIR$/backtest/eventEngine.py" />
-        <option value="$PROJECT_DIR$/data_process/save_stock_list.py" />
-        <option value="$PROJECT_DIR$/data_process/sh_base_define.py" />
         <option value="$PROJECT_DIR$/data_process/SH600141.csv" />
         <option value="$PROJECT_DIR$/test_file/从聚宽下载指数分钟线数据样例.py" />
         <option value="$PROJECT_DIR$/test_file/从聚宽下载指数日线数据样例2.py" />
         <option value="$PROJECT_DIR$/backtest/backtestEngine.py" />
         <option value="$PROJECT_DIR$/data_process/sh_stock_process.py" />
+        <option value="$PROJECT_DIR$/data_process/save_stock_list.py" />
+        <option value="$PROJECT_DIR$/data_process/save_szstock_list.py" />
+        <option value="$PROJECT_DIR$/data_process/sh_base_define.py" />
+        <option value="$PROJECT_DIR$/data_process/base_define.py" />
+        <option value="$PROJECT_DIR$/data_process/save_shstock_list.py" />
+        <option value="$PROJECT_DIR$/data_process/sz_stock_process.py" />
+        <option value="$PROJECT_DIR$/JZpyapi/JZpyapi/apis/ctp.py" />
+        <option value="$PROJECT_DIR$/JZpyapi/JZpyapi/apis/index.py" />
+        <option value="$PROJECT_DIR$/JZpyapi/JZpyapi/apis/login.py" />
+        <option value="$PROJECT_DIR$/JZpyapi/JZpyapi/apis/xtp.py" />
+        <option value="$PROJECT_DIR$/JZpyapi/JZpyapi/asyncbase/client.py" />
+        <option value="$PROJECT_DIR$/JZpyapi/JZpyapi/asyncbase/__init__.py" />
+        <option value="$PROJECT_DIR$/JZpyapi/JZpyapi/client.py" />
+        <option value="$PROJECT_DIR$/JZpyapi/JZpyapi/main.py" />
+        <option value="$PROJECT_DIR$/JZpyapi/JZpyapi/mapping.py" />
+        <option value="$PROJECT_DIR$/JZpyapi/JZpyapi/utils.py" />
+        <option value="$PROJECT_DIR$/JZpyapi/scripts/pull_quotation.py" />
+        <option value="$PROJECT_DIR$/JZpyapi/JZpyapi/pb/report_pb2.py" />
+        <option value="$PROJECT_DIR$/JZpyapi/JZpyapi/pb/common_pb2.py" />
+        <option value="$PROJECT_DIR$/JZpyapi/JZpyapi/pb/auth_pb2.py" />
+        <option value="$PROJECT_DIR$/JZpyapi/JZpyapi/pb/f10_pb2.py" />
+        <option value="$PROJECT_DIR$/JZpyapi/JZpyapi/pb/ft_pb2.py" />
+        <option value="$PROJECT_DIR$/JZpyapi/JZpyapi/pb/index_pb2.py" />
+        <option value="$PROJECT_DIR$/JZpyapi/JZpyapi/pb/investment_pb2.py" />
+        <option value="$PROJECT_DIR$/JZpyapi/JZpyapi/pb/product_pb2.py" />
+        <option value="$PROJECT_DIR$/JZpyapi/JZpyapi/pb/push_pb2.py" />
+        <option value="$PROJECT_DIR$/JZpyapi/JZpyapi/pb/quant_proxy_pb2.py" />
+        <option value="$PROJECT_DIR$/JZpyapi/JZpyapi/pb/register_pb2.py" />
+        <option value="$PROJECT_DIR$/JZpyapi/JZpyapi/pb/topic_invest_pb2.py" />
+        <option value="$PROJECT_DIR$/JZpyapi/JZpyapi/pb/zero_script_pb2.py" />
+        <option value="$PROJECT_DIR$/JZpyapi/JZpyapi/apis/report.py" />
+        <option value="$PROJECT_DIR$/JZpyapi/JZpyapi/parser.py" />
+        <option value="$PROJECT_DIR$/JZpyapi/JZpyapi/apis/tick_report.py" />
+        <option value="$PROJECT_DIR$/JZpyapi/rpc_protos/src/history.proto" />
+        <option value="$PROJECT_DIR$/JZpyapi/get_stock_tick.py" />
+        <option value="$PROJECT_DIR$/JZpyapi/log_auth.py" />
+        <option value="$PROJECT_DIR$/data_process/log_auth.py" />
+        <option value="$PROJECT_DIR$/data_process/读取公司tick数据.py" />
+        <option value="$PROJECT_DIR$/data_process/get_stock_pool.py" />
+        <option value="$PROJECT_DIR$/data_process/get_stock_tick.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="455" />
-    <option name="y" value="14" />
+    <option name="x" value="953" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
@@ -302,28 +277,31 @@
             <path>
               <item name="vnpyStockEngine" type="b2602c69:ProjectViewProjectNode" />
               <item name="vnpyStockEngine" type="462c0819:PsiDirectoryNode" />
-              <item name="backtest" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vnpyStockEngine" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vnpyStockEngine" type="462c0819:PsiDirectoryNode" />
               <item name="data_process" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="vnpyStockEngine" type="b2602c69:ProjectViewProjectNode" />
               <item name="vnpyStockEngine" type="462c0819:PsiDirectoryNode" />
-              <item name="data_process" type="462c0819:PsiDirectoryNode" />
-              <item name="temp" type="462c0819:PsiDirectoryNode" />
+              <item name="JZpyapi" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="vnpyStockEngine" type="b2602c69:ProjectViewProjectNode" />
               <item name="vnpyStockEngine" type="462c0819:PsiDirectoryNode" />
-              <item name="examples" type="462c0819:PsiDirectoryNode" />
+              <item name="JZpyapi" type="462c0819:PsiDirectoryNode" />
+              <item name="JZpyapi" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="vnpyStockEngine" type="b2602c69:ProjectViewProjectNode" />
               <item name="vnpyStockEngine" type="462c0819:PsiDirectoryNode" />
-              <item name="test_file" type="462c0819:PsiDirectoryNode" />
+              <item name="JZpyapi" type="462c0819:PsiDirectoryNode" />
+              <item name="rpc_protos" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vnpyStockEngine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vnpyStockEngine" type="462c0819:PsiDirectoryNode" />
+              <item name="JZpyapi" type="462c0819:PsiDirectoryNode" />
+              <item name="rpc_protos" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -346,9 +324,13 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="H:\vnpyStockEngine\JZpyapi\JZpyapi\pb" />
+      <recent name="H:\vnpyStockEngine\JZpyapi\rpc_protos\src" />
+      <recent name="H:\vnpyStockEngine\data_process" />
       <recent name="C:\Users\BruceWong\Desktop\develop\backtest" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="H:\vnpyStockEngine\data_process" />
       <recent name="H:\vnpyBacktest\test_file" />
       <recent name="H:\vnpyBacktest\examples" />
     </key>
@@ -365,29 +347,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.sh_stock_process">
-    <configuration name="从聚宽下载指数分钟线数据样例" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="develop" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test_file" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_file/从聚宽下载指数分钟线数据样例.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="get_stock_list" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.get_stock_tick (1)">
+    <configuration name="get_stock_pool" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="develop" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -399,7 +360,70 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="H:\vnpyStockEngine\data_process\save_stock_list.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/data_process/get_stock_pool.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="get_stock_tick (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="develop" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/data_process" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/data_process/get_stock_tick.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="get_stock_tick" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="develop" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/JZpyapi" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="H:\vnpyStockEngine\data_process\get_stock_tick.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="log_auth" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="develop" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/JZpyapi" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="H:\vnpyStockEngine\data_process\log_auth.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -429,7 +453,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="save_stock_list" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="读取公司tick数据" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="develop" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -441,49 +465,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/data_process/save_stock_list.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="sh_base_define" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="develop" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/data_process" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/data_process/sh_base_define.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="sh_stock_process" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="develop" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/data_process" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/data_process/sh_stock_process.py" />
+      <option name="SCRIPT_NAME" value="H:\vnpyStockEngine\data_process\读取公司tick数据测试.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -494,11 +476,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.sh_stock_process" />
-        <item itemvalue="Python.从聚宽下载指数分钟线数据样例" />
-        <item itemvalue="Python.save_stock_list" />
-        <item itemvalue="Python.get_stock_list" />
-        <item itemvalue="Python.sh_base_define" />
+        <item itemvalue="Python.get_stock_tick (1)" />
+        <item itemvalue="Python.get_stock_pool" />
+        <item itemvalue="Python.读取公司tick数据" />
+        <item itemvalue="Python.log_auth" />
+        <item itemvalue="Python.get_stock_tick" />
       </list>
     </recent_temporary>
   </component>
@@ -528,7 +510,26 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13962065" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16174921" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49894625" visible="true" weight="0.35683298" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4002169" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3286334" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.329718" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.329718" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50105375" side_tool="true" visible="true" weight="0.35683298" />
+      <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.49947312" weight="0.5151844" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16174921" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -541,241 +542,363 @@
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.329718" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.329718" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.329718" />
-      <window_info anchor="bottom" id="Python Console" order="10" weight="0.3286334" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout>
-    <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.10642782" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32104123" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32928178" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="10" weight="0.3286334" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.45553145" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout-to-restore>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/backtest/ctaBacktestingMulti.py" />
-    <entry file="file://$PROJECT_DIR$/examples/Single_Strategy/strategy_doubleMA1.py" />
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/IPython/core/interactiveshell.py">
+    <entry file="file://$PROJECT_DIR$/JZpyapi/JZpyapi/pb/ften_pb2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="3266" selection-start-line="3266" selection-end-line="3266" />
+        <state relative-caret-position="-621" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JZpyapi/JZpyapi/pb/index_pb2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_file/整合.py" />
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/multiprocessing/pool.py">
+    <entry file="file://$PROJECT_DIR$/JZpyapi/JZpyapi/pb/investment_pb2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="643" selection-start-line="643" selection-end-line="643" />
+        <state relative-caret-position="414">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/logs/test_20190123_162616/df_daily.csv" />
-    <entry file="file://$PROJECT_DIR$/examples/logs/test_20190123_162616/TradeRecord.csv" />
-    <entry file="file://$PROJECT_DIR$/test_file/mongo数据读取测试.py">
+    <entry file="file://$PROJECT_DIR$/JZpyapi/JZpyapi/pb/product_pb2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="14" lean-forward="true" selection-start-column="14" selection-end-column="14" />
+        <state relative-caret-position="368">
+          <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/logs/test_20190124_150527/TradeRecord.csv" />
-    <entry file="file://$PROJECT_DIR$/examples/logs/test_20190124_150631/TradeRecord.csv" />
-    <entry file="file://$PROJECT_DIR$/examples/logs/test_20190124_152832/TradeRecord.csv" />
-    <entry file="file://$PROJECT_DIR$/examples/logs/test_20190124_152917/TradeRecord.csv" />
-    <entry file="file://$PROJECT_DIR$/examples/logs/test_20190124_153050/TradeRecord.csv" />
-    <entry file="file://$PROJECT_DIR$/examples/logs/test_20190124_153025/TradeRecord.csv" />
-    <entry file="file://$PROJECT_DIR$/examples/logs/test_20190124_153229/TradeRecord.csv" />
-    <entry file="file://$PROJECT_DIR$/examples/logs/test_20190124_153545/TradeRecord.csv" />
-    <entry file="file://$PROJECT_DIR$/examples/logs/test_20190125_090205/TradeRecord.csv" />
-    <entry file="file://$PROJECT_DIR$/examples/logs/test_20190125_103143/TradeRecord.csv" />
-    <entry file="file://$PROJECT_DIR$/examples/logs/test_20190125_103234/TradeRecord.csv" />
-    <entry file="file://$PROJECT_DIR$/examples/logs/test_20190125_103437/TradeRecord.csv" />
-    <entry file="file://$PROJECT_DIR$/examples/logs/test_20190125_103659/TradeRecord.csv" />
-    <entry file="file://$PROJECT_DIR$/examples/logs/test_20190125_105428/TradeRecord.csv" />
-    <entry file="file://$PROJECT_DIR$/examples/logs/test_20190125_122024/TradeRecord.csv" />
-    <entry file="file://$PROJECT_DIR$/examples/logs/test_20190125_135511/TradeRecord.csv" />
-    <entry file="file://$PROJECT_DIR$/examples/logs/test_20190125_140105/TradeRecord.csv" />
-    <entry file="file://$PROJECT_DIR$/examples/logs/test_20190125_141257/TradeRecord.csv" />
-    <entry file="file://$PROJECT_DIR$/data_process/stock_list.csv" />
-    <entry file="file://$PROJECT_DIR$/data_process/test2.csv" />
-    <entry file="file://$PROJECT_DIR$/data_process/test.csv" />
-    <entry file="file://$PROJECT_DIR$/data_process/SH603826.csv" />
-    <entry file="file://$PROJECT_DIR$/data_process/temp/trade_data2.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data_process/trade_data.csv" />
-    <entry file="file://$PROJECT_DIR$/data_process/SH600141.csv">
+    <entry file="file://$PROJECT_DIR$/JZpyapi/JZpyapi/pb/push_pb2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="291" column="28" lean-forward="true" selection-start-line="291" selection-end-line="292" />
+        <state relative-caret-position="368">
+          <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backtest/constant.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/runOptimization_template.py">
+    <entry file="file://$PROJECT_DIR$/JZpyapi/JZpyapi/pb/quant_proxy_pb2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
-          <caret line="15" column="45" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
+          <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JZpyapi/JZpyapi/pb/quote_push_pb2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-552" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JZpyapi/JZpyapi/pb/rank_pb2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-552" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JZpyapi/JZpyapi/pb/valuehunter_pb2.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JZpyapi/JZpyapi/pb/user_collect_pb2.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JZpyapi/JZpyapi/pb/upic_pb2.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JZpyapi/JZpyapi/pb/topic_invest_pb2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JZpyapi/JZpyapi/pb/zero_script_pb2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JZpyapi/JZpyapi/pb/web_pb2.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JZpyapi/JZpyapi/pb/warning_pb2.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JZpyapi/JZpyapi/pb/register_pb2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JZpyapi/tests/test_async_ctp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="125" column="37" lean-forward="true" selection-start-line="125" selection-start-column="37" selection-end-line="125" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JZpyapi/rpc_protos/src/common.proto">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7431" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JZpyapi/tests/test_async.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2652">
           <folding>
-            <element signature="e#43#117#0" expanded="true" />
+            <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backtest/evaluation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4347">
-          <caret line="189" column="41" selection-start-line="189" selection-start-column="41" selection-end-line="189" selection-end-column="41" />
-          <folding>
-            <element signature="e#41#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/runBacktesing_template.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="827">
-          <caret line="43" selection-start-line="43" selection-end-line="43" />
-          <folding>
-            <element signature="e#40#51#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backtest/template.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="826">
-          <caret line="53" column="17" selection-start-line="53" selection-start-column="10" selection-end-line="53" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data_process/temp/trade_data1.csv">
-      <provider selected="true" editor-type-id="LargeFileEditor">
-        <state relative-caret-position="-2829" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_file/从聚宽下载指数日线数据样例.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="47" column="37" selection-start-line="47" selection-start-column="37" selection-end-line="47" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/pymongo/message.py">
+    <entry file="file://$PROJECT_DIR$/JZpyapi/JZpyapi/utils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="205">
-          <caret line="1195" selection-start-line="1195" selection-end-line="1195" />
+          <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_file/读取tick数据.py">
+    <entry file="file://$PROJECT_DIR$/JZpyapi/JZpyapi/client.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="-2438">
+          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data_process/save_stock_list.py">
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/google/protobuf/internal/enum_type_wrapper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" column="21" lean-forward="true" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
+        <state relative-caret-position="389">
+          <caret line="47" column="31" selection-start-line="47" selection-start-column="22" selection-end-line="47" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JZpyapi/JZpyapi/pb/common_pb2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="1401" selection-start-line="1401" selection-end-line="1401" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JZpyapi/JZpyapi/pb/xtp_pb2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="12633" column="12" selection-start-line="12633" selection-end-line="12633" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JZpyapi/rpc_protos/src/base.proto">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="376" column="25" selection-start-line="376" selection-start-column="3" selection-end-line="376" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JZpyapi/JZpyapi/pb/base_pb2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="436">
+          <caret line="1756" column="15" selection-start-line="1756" selection-start-column="15" selection-end-line="1756" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JZpyapi/JZpyapi/asyncbase/client.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="319" column="27" selection-start-line="319" selection-start-column="27" selection-end-line="319" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JZpyapi/JZpyapi/pb/report_pb2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4">
+          <caret line="5908" column="11" lean-forward="true" selection-start-line="5908" selection-start-column="11" selection-end-line="5908" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JZpyapi/rpc_protos/src/report.proto">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="58" column="27" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JZpyapi/rpc_protos/src/xtp.proto">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="30" column="24" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JZpyapi/JZpyapi/apis/xtp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1033">
+          <caret line="163" column="39" selection-start-line="163" selection-start-column="25" selection-end-line="163" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+            <element signature="e#349#3746#0" />
+            <element signature="e#7287#8459#0" />
+            <element signature="e#8499#9261#0" />
+            <element signature="e#9309#10297#0" />
+            <element signature="e#10336#11181#0" />
+            <element signature="e#11224#12075#0" />
+            <element signature="e#12111#12956#0" />
+            <element signature="e#12994#13778#0" />
+            <element signature="e#13813#14518#0" />
+            <element signature="e#14560#15420#0" />
+            <element signature="e#15457#16300#0" />
+            <element signature="e#16340#17490#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="1740" selection-start-line="1740" selection-end-line="1740" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JZpyapi/__ini__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JZpyapi/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JZpyapi/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-145" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JZpyapi/JZpyapi/pb/history_pb2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="3772" selection-start-line="3772" selection-end-line="3772" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data_process/base_define.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data_process/save_shstock_list.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data_process/temp/trade_data3.csv">
-      <provider selected="true" editor-type-id="LargeFileEditor">
-        <state relative-caret-position="-989">
-          <caret line="2" column="40" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data_process/sh_base_define.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="17" column="34" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backtest/eventEngine.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-874">
-          <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_file/从聚宽下载指数日线数据样例2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="481">
-          <caret line="48" column="31" selection-start-line="48" selection-start-column="31" selection-end-line="48" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_file/从聚宽下载指数分钟线数据样例.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="44" column="17" lean-forward="true" selection-start-line="44" selection-start-column="17" selection-end-line="44" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backtest/object.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="120" column="39" lean-forward="true" selection-start-line="120" selection-start-column="39" selection-end-line="120" selection-end-column="39" />
-          <folding>
-            <element signature="e#44#56#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data_process/sh_stock_process.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="147" column="55" lean-forward="true" selection-start-line="147" selection-start-column="55" selection-end-line="147" selection-end-column="55" />
+        <state relative-caret-position="253">
+          <caret line="50" column="13" lean-forward="true" selection-start-line="50" selection-start-column="13" selection-end-line="50" selection-end-column="13" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backtest/backtestEngine.py">
+    <entry file="file://$PROJECT_DIR$/data_process/log_auth.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="21" column="37" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="37" />
+        <state>
           <folding>
-            <element signature="e#57#66#0" expanded="true" />
+            <element signature="e#0#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JZpyapi/JZpyapi/apis/tick_report.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-414" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data_process/stock_list.pkl">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JZpyapi/JZpyapi/apis/report.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-253">
+          <caret line="30" column="16" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
+          <folding>
+            <element signature="e#1#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JZpyapi/JZpyapi/parser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="121" column="7" selection-start-line="121" selection-start-column="7" selection-end-line="121" selection-end-column="7" />
+          <folding>
+            <element signature="e#99#254#0" />
+            <element signature="e#163#253#0" />
+            <element signature="e#277#401#0" />
+            <element signature="e#733#1446#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data_process/读取公司tick数据测试.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JZpyapi/rpc_protos/src/history.proto">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-536">
+          <caret line="459" column="27" selection-start-line="459" selection-start-column="27" selection-end-line="459" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data_process/get_stock_pool.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data_process/sz_stock_process.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="86" column="5" selection-start-line="86" selection-start-column="5" selection-end-line="86" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data_process/xxx.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1817">
+          <caret line="79" column="39" lean-forward="true" selection-start-line="79" selection-start-column="39" selection-end-line="79" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data_process/get_stock_tick.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1049">
+          <caret line="105" selection-start-line="105" selection-end-line="105" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
