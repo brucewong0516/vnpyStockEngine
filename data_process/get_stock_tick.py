@@ -1,9 +1,11 @@
 import pandas as pd
 import datetime
 import time
+import numpy as np
 
 from JZpyapi.JZpyapi.apis.tick_report import TickData
 from data_process.log_auth import client
+from data_process.get_stock_pool import get_stocks
 
 
 def get_tick(client, start_time, end_time, stock, market_type):
@@ -27,6 +29,7 @@ def get_tick(client, start_time, end_time, stock, market_type):
 
 def get_wash_tick(df, market='SZ'):
     t0 = time.time()
+
     # 对L2数据进行清洗
     def get_msg_to_dict(msg):
         """
@@ -83,7 +86,7 @@ def get_wash_tick(df, market='SZ'):
                 ]
     # 设定字段
     key_list = ['symbol', 'date', 'last_close', 'open', 'high', 'low', 'close',
-                'volume', 'money', 'tradedCount', 'totalBuy', 'averageBuy', 'totalSell', 'averageSell',
+                'volume', 'money', 'tradedCount', 'totalDeputeBuy', 'averageBuy', 'totalDeputeSell', 'averageSell',
                 'sellP1', 'sellP2', 'sellP3', 'sellP4', 'sellP5',
                 'sellP6', 'sellP7', 'sellP8', 'sellP9', 'sellP10',
                 'sellV1', 'sellV2', 'sellV3', 'sellV4', 'sellV5',
@@ -111,26 +114,56 @@ def get_data_filter_by_time(df):
     # 转换时间戳
     date = df['date'].iloc[-1].date()
     start_time1 = datetime.datetime(date.year, date.month, date.day, 9, 30, 0)
-    end_time1 = datetime.datetime(date.year, date.month, date.day, 11, 30, 0)
+    end_time1 = datetime.datetime(date.year, date.month, date.day, 11, 30, 00)
     start_time2 = datetime.datetime(date.year, date.month, date.day, 13, 0, 0)
     end_time2 = datetime.datetime(date.year, date.month, date.day, 15, 0, 0)
     stk_data1 = df[(df['date'] >= start_time1) & (df['date'] <= end_time1)]
     stk_data2 = df[(df['date'] >= start_time2) & (df['date'] <= end_time2)]
     df = pd.concat([stk_data1, stk_data2], axis=0)
+    print('{} 起始第一个时间 {}'.format(df.iloc[0, 0], df.iloc[0, 1]))
     return df
+
+
+def fill_data(df):
+    t0 = time.time()
+    date = datetime.datetime.utcfromtimestamp((df['date'].values[0]-np.datetime64('1970-01-01T00:00:00Z')) /\
+                                              np.timedelta64(1, 's')).strftime('%Y-%m-%d %H:%M:%S')
+    time_initial = date.split(' ')[1]
+    date = date.split(' ')[0]
+    df.set_index('date', inplace=True)
+    if time_initial == '09:30:00':
+        hms_start1 = ' '.join([date, time_initial])
+        hms_start2 = ' '.join([date, '13:00:00'])
+    elif time_initial == '09:30:01':
+        hms_start1 = ' '.join([date, time_initial])
+        hms_start2 = ' '.join([date, '13:00:01'])
+    elif time_initial == '09:30:02':
+        hms_start1 = ' '.join([date, time_initial])
+        hms_start2 = ' '.join([date, '13:00:02'])
+    hms_end1 = ' '.join([date, '11:30:00'])
+    hms_end2 = ' '.join([date, '15:00:00'])
+    t1 = list(pd.date_range(start=hms_start1, end=hms_end1, freq='3s'))
+    t2 = list(pd.date_range(start=hms_start2, end=hms_end2, freq='3s'))
+    df_new = pd.DataFrame(index=t1 + t2)
+    df_new = pd.concat([df, df_new], axis=1)
+    df_new.fillna(method='ffill', inplace=True)
+    df_new.drop([df_new.index.values[1]], inplace=True)
+    print('生成完整表花销时间 {}'.format(time.time()-t0))
+    return df_new
 
 
 if __name__ == '__main__':
     start_time = datetime.datetime(2018, 12, 4, 10, 0, 0)
     end_time = datetime.datetime(2018, 12, 4, 10, 0, 0)
-    from data_process.get_stock_pool import get_stocks
-    stock_list = get_stocks(r'H:\vnpyStockEngine\data_process\sh_stock_list.json')
+
+    stock_list = get_stocks(r'H:\vnpyStockEngine\data_process\sz_stock_list.json')
     t0 = time.time()
-    for s in stock_list[60:61]:
+    for s in stock_list[1:10]:
         try:
-            df = get_tick(client, start_time, end_time, s, 1)
-            df2 = get_wash_tick(df, market='SH')
+            df = get_tick(client, start_time, end_time, s, 2)
+            df2 = get_wash_tick(df, market='SZ')
             df3 = get_data_filter_by_time(df2)
+            df4 = fill_data(df3)
         except Exception as e:
             print('{} is None'.format(s))
             continue

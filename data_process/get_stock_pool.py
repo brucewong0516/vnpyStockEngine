@@ -1,4 +1,5 @@
 import json
+from data_process.base_define import sh_address
 
 
 def get_stocks(address):
@@ -8,6 +9,5 @@ def get_stocks(address):
 
 
 if __name__ == '__main__':
-    address = r'H:\vnpyStockEngine\data_process\sz_stock_list.json'
-    print(get_stocks(address))
+    print(get_stocks(sh_address))
 

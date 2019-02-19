@@ -27,4 +27,5 @@ date_list = ['20181224', '20181225', '20181226', '20181227', '20181228',
 trade_shdata_base = r'h:\vnpyStockEngine\data_process\sh_temp'
 trade_szdata_base = r'h:\vnpyStockEngine\data_process\sz_temp'
 
-stock_list_address = r'h:\vnpyStockEngine\data_process\stock_list.pkl'
+sh_address = r'H:\vnpyStockEngine\data_process\sh_stock_list.json'
+sz_address = r'H:\vnpyStockEngine\data_process\sz_stock_list.json'
