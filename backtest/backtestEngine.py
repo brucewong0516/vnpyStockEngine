@@ -195,6 +195,7 @@ class BacktestingEngine(object):
         # ------------------------------------------------------------------
         # 连接数据库
         collection = self.dbClient[self.dbName][self.symbol]
+        # collection.createIndex({'start_time': 1})
         dataClass = vo.BarData
         self.output(u'开始回测')
         # ------------------------------------------------------------------

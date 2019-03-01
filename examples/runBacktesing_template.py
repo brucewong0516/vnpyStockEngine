@@ -15,7 +15,7 @@ if __name__ == '__main__':
     # -------------------------------------------------------------------
     # 2、设置基本的变量
     # 设置数据库
-    engine.setDatabase(address="192.168.0.107", port=27017)   # 远程数据库
+    engine.setDatabase(address="localhost", port=27017)   # 远程数据库
     # 设置初始资金
     engine.setInitCapital(1000000)                # 初始资金为100w元
     # 设置策略开始和结束时间
@@ -28,7 +28,7 @@ if __name__ == '__main__':
     setting = {"ClassName": "test",
                "market": "stock",
                "symbol": "000001.XSHG",
-               "frequency": "1day"}
+               "frequency": "1min"}
     # 设置交易参数
     d = {"n1": 6, "n2": 30}
     setting.update({"d": d})

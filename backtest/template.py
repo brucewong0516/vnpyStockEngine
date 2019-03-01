@@ -80,12 +80,14 @@ class CtaTemplate(object):
             # 趋势向上
             if trend_up:
                 self.buy(bar.close, int(account.cash/bar.close))  # 开多
+                print('{} buyPrice is {} '.format(bar.start_time, bar.close))
         # 当前持有多头
         elif self.pos > 0:
             # 趋势转下
             if trend_dn:
                 # 平多
                 self.sell(bar.close, abs(self.pos))
+                print('{} sellPrice is {} '.format(bar.start_time, bar.close))
 
     # ----------------------------------------------------------------------
     def buy(self, price, volume):
