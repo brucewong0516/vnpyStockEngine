@@ -1,5 +1,5 @@
 import json
-from data_process.base_define import sh_address
+from data_process.base_define import hs300_sh_address, trading_days_address
 
 
 def get_stocks(address):
@@ -8,6 +8,12 @@ def get_stocks(address):
     return stock_list
 
 
-if __name__ == '__main__':
-    print(get_stocks(sh_address))
+def get_trading_days(address):
+    with open(address, 'r') as f:
+        trading_days = json.load(f)
+    return trading_days
 
+
+if __name__ == '__main__':
+    print(get_stocks(hs300_sh_address))
+    print(get_trading_days(trading_days_address))

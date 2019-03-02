@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0cedd384-9834-4053-8fa1-8f5776922f81" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/data_process/kline_rebuild.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backtest/backtestEngine.py" beforeDir="false" afterPath="$PROJECT_DIR$/backtest/backtestEngine.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backtest/template.py" beforeDir="false" afterPath="$PROJECT_DIR$/backtest/template.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/runBacktesing_template.py" beforeDir="false" afterPath="$PROJECT_DIR$/examples/runBacktesing_template.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_process/base_define.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_process/base_define.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_process/get_stock_pool.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_process/get_stock_pool.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_process/get_stock_tick.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_process/get_stock_tick.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_process/log_auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_process/log_auth.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_process/读取公司tick数据测试.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_process/读取公司tick数据测试.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,59 +17,40 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data_process/get_stock_tick.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="10" column="63" selection-start-line="10" selection-start-column="63" selection-end-line="10" selection-end-column="63" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/examples/runBacktesing_template.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="621">
-              <caret line="38" column="38" lean-forward="true" selection-start-line="38" selection-start-column="38" selection-end-line="38" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backtest/backtestEngine.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
-              <caret line="459" column="43" selection-start-line="459" selection-start-column="43" selection-end-line="459" selection-end-column="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backtest/template.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="94" column="39" selection-start-line="94" selection-start-column="30" selection-end-line="94" selection-end-column="39" />
-              <folding>
-                <element signature="e#0#43#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/backtest/evaluation.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="67" column="24" selection-start-line="67" selection-start-column="8" selection-end-line="67" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.41609052">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/data_process/get_stock_tick.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-3215">
+                  <caret line="95" column="22" lean-forward="true" selection-start-line="95" selection-start-column="22" selection-end-line="95" selection-end-column="22" />
+                  <folding>
+                    <element signature="e#0#19#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/data_process/kline_rebuild.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="483">
+                  <caret line="21" column="26" lean-forward="true" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
+                  <folding>
+                    <element signature="e#0#6#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -139,7 +123,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/test_file/读取tick数据.py" />
         <option value="$PROJECT_DIR$/data_process/get_stock_list.py" />
         <option value="$PROJECT_DIR$/backtest/eventEngine.py" />
         <option value="$PROJECT_DIR$/data_process/SH600141.csv" />
@@ -190,6 +173,7 @@
         <option value="$PROJECT_DIR$/examples/runBacktesing_template.py" />
         <option value="$PROJECT_DIR$/backtest/backtestEngine.py" />
         <option value="$PROJECT_DIR$/backtest/template.py" />
+        <option value="$PROJECT_DIR$/data_process/kline_rebuild.py" />
       </list>
     </option>
   </component>
@@ -227,17 +211,40 @@
             <path>
               <item name="vnpyStockEngine" type="b2602c69:ProjectViewProjectNode" />
               <item name="vnpyStockEngine" type="462c0819:PsiDirectoryNode" />
-              <item name="examples" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vnpyStockEngine" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vnpyStockEngine" type="462c0819:PsiDirectoryNode" />
               <item name="JZpyapi" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="vnpyStockEngine" type="b2602c69:ProjectViewProjectNode" />
               <item name="vnpyStockEngine" type="462c0819:PsiDirectoryNode" />
-              <item name="test_file" type="462c0819:PsiDirectoryNode" />
+              <item name="JZpyapi" type="462c0819:PsiDirectoryNode" />
+              <item name="JZpyapi" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vnpyStockEngine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vnpyStockEngine" type="462c0819:PsiDirectoryNode" />
+              <item name="JZpyapi" type="462c0819:PsiDirectoryNode" />
+              <item name="JZpyapi" type="462c0819:PsiDirectoryNode" />
+              <item name="apis" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vnpyStockEngine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vnpyStockEngine" type="462c0819:PsiDirectoryNode" />
+              <item name="JZpyapi" type="462c0819:PsiDirectoryNode" />
+              <item name="JZpyapi" type="462c0819:PsiDirectoryNode" />
+              <item name="pb" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vnpyStockEngine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vnpyStockEngine" type="462c0819:PsiDirectoryNode" />
+              <item name="JZpyapi" type="462c0819:PsiDirectoryNode" />
+              <item name="rpc_protos" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vnpyStockEngine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vnpyStockEngine" type="462c0819:PsiDirectoryNode" />
+              <item name="JZpyapi" type="462c0819:PsiDirectoryNode" />
+              <item name="rpc_protos" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -258,16 +265,17 @@
     </option>
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="H:\vnpyStockEngine\JZpyapi\JZpyapi\pb" />
-      <recent name="H:\vnpyStockEngine\JZpyapi\rpc_protos\src" />
-      <recent name="H:\vnpyStockEngine\data_process" />
-      <recent name="C:\Users\BruceWong\Desktop\develop\backtest" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="H:\vnpyStockEngine\data_process" />
       <recent name="H:\vnpyBacktest\test_file" />
       <recent name="H:\vnpyBacktest\examples" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="H:\vnpyStockEngine\JZpyapi\JZpyapi\apis" />
+      <recent name="H:\vnpyStockEngine\data_process" />
+      <recent name="H:\vnpyStockEngine\JZpyapi\JZpyapi\pb" />
+      <recent name="H:\vnpyStockEngine\JZpyapi\rpc_protos\src" />
+      <recent name="C:\Users\BruceWong\Desktop\develop\backtest" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -282,7 +290,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.runBacktesing_template (1)">
+  <component name="RunManager" selected="Python.kline_rebuild">
     <configuration name="get_stock_pool" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="develop" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -325,7 +333,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="log_auth" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="kline_rebuild" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="develop" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -333,11 +341,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/JZpyapi" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/data_process" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="H:\vnpyStockEngine\data_process\log_auth.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/data_process/kline_rebuild.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -411,11 +419,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.kline_rebuild" />
         <item itemvalue="Python.template" />
         <item itemvalue="Python.get_stock_tick (1)" />
         <item itemvalue="Python.get_stock_pool" />
         <item itemvalue="Python.读取公司tick数据" />
-        <item itemvalue="Python.log_auth" />
       </list>
     </recent_temporary>
   </component>
@@ -443,13 +451,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16174921" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49894625" weight="0.40563992" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49894625" visible="true" weight="0.2657267" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4002169" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -483,17 +492,6 @@
     </layout-to-restore>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/JZpyapi/JZpyapi/pb/rank_pb2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-552" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JZpyapi/JZpyapi/pb/valuehunter_pb2.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JZpyapi/JZpyapi/pb/user_collect_pb2.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/JZpyapi/JZpyapi/pb/upic_pb2.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -744,22 +742,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data_process/base_define.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="644">
-          <caret line="28" selection-start-line="28" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JZpyapi/JZpyapi/pb/history_pb2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="257" column="19" selection-start-line="257" selection-start-column="5" selection-end-line="257" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data_process/xxxx.csv" />
-    <entry file="file://$PROJECT_DIR$/data_process/xxx.csv" />
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -774,27 +757,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/JZpyapi/rpc_protos/src/history.proto">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="469" column="46" lean-forward="true" selection-start-line="469" selection-start-column="42" selection-end-line="469" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/examples/logs/test_20190227_092408/TradeRecord.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
           <caret line="1" column="59" selection-start-line="1" selection-start-column="52" selection-end-line="1" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data_process/get_stock_tick.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="10" column="63" selection-start-line="10" selection-start-column="63" selection-end-line="10" selection-end-column="63" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -833,6 +799,60 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="621">
           <caret line="38" column="38" lean-forward="true" selection-start-line="38" selection-start-column="38" selection-end-line="38" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data_process/base_define.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="644">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JZpyapi/JZpyapi/apis/tick_order.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/pandas/core/series.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="3193" selection-start-line="3193" selection-end-line="3193" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data_process/xxx.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JZpyapi/rpc_protos/src/history.proto">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12466">
+          <caret line="542" column="44" lean-forward="true" selection-start-line="542" selection-start-column="44" selection-end-line="542" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JZpyapi/JZpyapi/pb/history_pb2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-10560">
+          <caret line="257" column="19" selection-start-line="257" selection-start-column="5" selection-end-line="257" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data_process/get_stock_tick.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3215">
+          <caret line="95" column="22" lean-forward="true" selection-start-line="95" selection-start-column="22" selection-end-line="95" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data_process/kline_rebuild.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="21" column="26" lean-forward="true" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#6#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
