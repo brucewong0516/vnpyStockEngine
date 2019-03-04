@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0cedd384-9834-4053-8fa1-8f5776922f81" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/data_process/kline_rebuild.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_process/l2_transform.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_process/plot_kline.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_process/base_define.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_process/base_define.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_process/get_stock_pool.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_process/get_stock_pool.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_process/get_stock_tick.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_process/get_stock_tick.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_process/log_auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_process/log_auth.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_process/读取公司tick数据测试.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_process/读取公司tick数据测试.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_process/kline_rebuild.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_process/kline_rebuild.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.csv" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,14 +15,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.41609052">
+    <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/data_process/get_stock_tick.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-3215">
-                  <caret line="95" column="22" lean-forward="true" selection-start-line="95" selection-start-column="22" selection-end-line="95" selection-end-column="22" />
+                <state relative-caret-position="368">
+                  <caret line="21" column="22" lean-forward="true" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
                   <folding>
                     <element signature="e#0#19#0" expanded="true" />
                   </folding>
@@ -37,12 +35,12 @@
       <split-second>
         <leaf>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/data_process/kline_rebuild.py">
+            <entry file="file://$PROJECT_DIR$/data_process/get_stock_tick.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="483">
-                  <caret line="21" column="26" lean-forward="true" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
+                <state relative-caret-position="368">
+                  <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
                   <folding>
-                    <element signature="e#0#6#0" expanded="true" />
+                    <element signature="e#0#19#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -55,6 +53,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Jupyter Notebook" />
         <option value="Python Script" />
       </list>
     </option>
@@ -123,9 +122,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/data_process/get_stock_list.py" />
-        <option value="$PROJECT_DIR$/backtest/eventEngine.py" />
-        <option value="$PROJECT_DIR$/data_process/SH600141.csv" />
         <option value="$PROJECT_DIR$/test_file/从聚宽下载指数分钟线数据样例.py" />
         <option value="$PROJECT_DIR$/test_file/从聚宽下载指数日线数据样例2.py" />
         <option value="$PROJECT_DIR$/data_process/sh_stock_process.py" />
@@ -173,12 +169,15 @@
         <option value="$PROJECT_DIR$/examples/runBacktesing_template.py" />
         <option value="$PROJECT_DIR$/backtest/backtestEngine.py" />
         <option value="$PROJECT_DIR$/backtest/template.py" />
+        <option value="$PROJECT_DIR$/data_process/test.ipynb" />
+        <option value="$PROJECT_DIR$/data_process/plot_kline.py" />
         <option value="$PROJECT_DIR$/data_process/kline_rebuild.py" />
+        <option value="$PROJECT_DIR$/data_process/l2_transform.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-7" />
+    <option name="x" value="953" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
@@ -190,7 +189,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -208,48 +206,11 @@
               <item name="vnpyStockEngine" type="462c0819:PsiDirectoryNode" />
               <item name="data_process" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="vnpyStockEngine" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vnpyStockEngine" type="462c0819:PsiDirectoryNode" />
-              <item name="JZpyapi" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vnpyStockEngine" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vnpyStockEngine" type="462c0819:PsiDirectoryNode" />
-              <item name="JZpyapi" type="462c0819:PsiDirectoryNode" />
-              <item name="JZpyapi" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vnpyStockEngine" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vnpyStockEngine" type="462c0819:PsiDirectoryNode" />
-              <item name="JZpyapi" type="462c0819:PsiDirectoryNode" />
-              <item name="JZpyapi" type="462c0819:PsiDirectoryNode" />
-              <item name="apis" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vnpyStockEngine" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vnpyStockEngine" type="462c0819:PsiDirectoryNode" />
-              <item name="JZpyapi" type="462c0819:PsiDirectoryNode" />
-              <item name="JZpyapi" type="462c0819:PsiDirectoryNode" />
-              <item name="pb" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vnpyStockEngine" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vnpyStockEngine" type="462c0819:PsiDirectoryNode" />
-              <item name="JZpyapi" type="462c0819:PsiDirectoryNode" />
-              <item name="rpc_protos" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vnpyStockEngine" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vnpyStockEngine" type="462c0819:PsiDirectoryNode" />
-              <item name="JZpyapi" type="462c0819:PsiDirectoryNode" />
-              <item name="rpc_protos" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -291,6 +252,27 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.kline_rebuild">
+    <configuration name="Python Console" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="develop" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="/Python Console" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="get_stock_pool" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="develop" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -396,34 +378,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="读取公司tick数据" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="develop" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/data_process" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="H:\vnpyStockEngine\data_process\读取公司tick数据测试.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python.kline_rebuild" />
+        <item itemvalue="Python.Python Console" />
         <item itemvalue="Python.template" />
         <item itemvalue="Python.get_stock_tick (1)" />
         <item itemvalue="Python.get_stock_pool" />
-        <item itemvalue="Python.读取公司tick数据" />
       </list>
     </recent_temporary>
   </component>
@@ -451,14 +412,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16174921" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15964173" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49894625" visible="true" weight="0.2657267" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49894625" weight="0.26898047" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4002169" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -466,7 +426,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.329718" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.329718" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50105375" side_tool="true" weight="0.35683298" />
-      <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.49947312" weight="0.5151844" />
+      <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.49947312" visible="true" weight="0.22342733" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -492,29 +452,6 @@
     </layout-to-restore>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/JZpyapi/JZpyapi/pb/upic_pb2.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JZpyapi/JZpyapi/pb/topic_invest_pb2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JZpyapi/JZpyapi/pb/zero_script_pb2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JZpyapi/JZpyapi/pb/web_pb2.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JZpyapi/JZpyapi/pb/warning_pb2.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/JZpyapi/JZpyapi/pb/register_pb2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="368">
@@ -757,20 +694,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/logs/test_20190227_092408/TradeRecord.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="1" column="59" selection-start-line="1" selection-start-column="52" selection-end-line="1" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/logs/test_20190227_092556/TradeRecord.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="54" selection-start-line="2" selection-start-column="50" selection-end-line="2" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/logs/test_20190227_092408/TradeRecord.csv" />
+    <entry file="file://$PROJECT_DIR$/examples/logs/test_20190227_092556/TradeRecord.csv" />
     <entry file="file://$PROJECT_DIR$/backtest/template.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -819,9 +744,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data_process/xxx.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/data_process/xxx.csv" />
     <entry file="file://$PROJECT_DIR$/JZpyapi/rpc_protos/src/history.proto">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="12466">
@@ -836,22 +759,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data_process/get_stock_tick.py">
+    <entry file="file://$PROJECT_DIR$/data_process/test.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data_process/xxx.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data_process/plot_kline.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3215">
-          <caret line="95" column="22" lean-forward="true" selection-start-line="95" selection-start-column="22" selection-end-line="95" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="1150">
+          <caret line="49" column="61" selection-start-line="49" selection-start-column="61" selection-end-line="49" selection-end-column="61" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/data_process/kline_rebuild.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="21" column="26" lean-forward="true" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
+        <state relative-caret-position="437">
+          <caret line="53" column="32" selection-start-line="53" selection-start-column="32" selection-end-line="53" selection-end-column="32" />
           <folding>
-            <element signature="e#0#6#0" expanded="true" />
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data_process/l2_transform.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1311" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data_process/get_stock_tick.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="21" column="22" lean-forward="true" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
