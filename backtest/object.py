@@ -4,101 +4,240 @@
 """
 import talib
 import numpy as np
+from collections import defaultdict
 from backtest.constant import (EMPTY_STRING, EMPTY_UNICODE, EMPTY_FLOAT, EMPTY_INT)
 
 
 class BarData(object):
     """K线数据"""
+
     # ----------------------------------------------------------------------
     def __init__(self):
-        self.exchange = EMPTY_STRING      # 交易所代码
-        self.symbol = EMPTY_STRING        # 交易所_品种代码, 全部小写
-        self.start_time = None            # K线开始的时间, datetime对象
-        self.end_time = None              # K线结束的时间, datetime对象
-        self.date = EMPTY_STRING          # bar开始的时间，日期
-        self.time = EMPTY_STRING          # 时间
-        self.frequency = EMPTY_STRING     # K线的频率, 可选的有"1min","3min","5min","15min","30min",
-        self.open = EMPTY_FLOAT           # 开盘价
-        self.high = EMPTY_FLOAT           # 最高价
-        self.low = EMPTY_FLOAT            # 最低价
-        self.close = EMPTY_FLOAT          # 收盘价
-        self.volume = EMPTY_FLOAT         # 成交量(交易品种的数量)
-        self.amount = EMPTY_FLOAT         # 成交额(基础品种的数量)
+        self.exchange = EMPTY_STRING             # 交易所代码
+        self.symbol = EMPTY_STRING               # 交易所_品种代码, 全部小写
+        self.start_time = None                   # K线开始的时间, datetime对象
+        self.end_time = None                     # K线结束的时间, datetime对象
+        self.date = EMPTY_STRING                 # bar开始的时间，日期
+        self.time = EMPTY_STRING                 # 时间
+        self.frequency = EMPTY_STRING            # K线的频率, 可选的有"1min","3min","5min","15min","30min",
+        self.open = EMPTY_FLOAT                  # 开盘价
+        self.high = EMPTY_FLOAT                  # 最高价
+        self.low = EMPTY_FLOAT                   # 最低价
+        self.close = EMPTY_FLOAT                 # 收盘价
+        self.volume = EMPTY_FLOAT                # 成交量(交易品种的数量)
+        self.amount = EMPTY_FLOAT                # 成交额(基础品种的数量)
+
+
+class TickData(object):
+    """tick数据"""
+
+    def __init__(self):
+        self.symbol = EMPTY_STRING
+        self.date = None
+        self.last_close = EMPTY_FLOAT
+        self.open = EMPTY_FLOAT
+        self.high = EMPTY_FLOAT
+        self.low = EMPTY_FLOAT
+        self.close = EMPTY_FLOAT
+        self.volume = EMPTY_FLOAT
+        self.money = EMPTY_FLOAT
+        self.tradedCount = EMPTY_FLOAT
+        self.totalDeputeBuy = EMPTY_FLOAT
+        self.averageBuy = EMPTY_FLOAT
+        self.totalDeputeSell = EMPTY_FLOAT
+        self.averageSell = EMPTY_FLOAT
+        self.sellP1 = EMPTY_FLOAT
+        self.sellP2 = EMPTY_FLOAT
+        self.sellP3 = EMPTY_FLOAT
+        self.sellP4 = EMPTY_FLOAT
+        self.sellP5 = EMPTY_FLOAT
+        self.sellP6 = EMPTY_FLOAT
+        self.sellP7 = EMPTY_FLOAT
+        self.sellP8 = EMPTY_FLOAT
+        self.sellP9 = EMPTY_FLOAT
+        self.sellP10 = EMPTY_FLOAT
+        self.sellV1 = EMPTY_FLOAT
+        self.sellV2 = EMPTY_FLOAT
+        self.sellV3 = EMPTY_FLOAT
+        self.sellV4 = EMPTY_FLOAT
+        self.sellV5 = EMPTY_FLOAT
+        self.sellV6 = EMPTY_FLOAT
+        self.sellV7 = EMPTY_FLOAT
+        self.sellV8 = EMPTY_FLOAT
+        self.sellV9 = EMPTY_FLOAT
+        self.sellV10 = EMPTY_FLOAT
+        self.sellD1 = EMPTY_FLOAT
+        self.sellD2 = EMPTY_FLOAT
+        self.sellD3 = EMPTY_FLOAT
+        self.sellD4 = EMPTY_FLOAT
+        self.sellD5 = EMPTY_FLOAT
+        self.sellD6 = EMPTY_FLOAT
+        self.sellD7 = EMPTY_FLOAT
+        self.sellD8 = EMPTY_FLOAT
+        self.sellD9 = EMPTY_FLOAT
+        self.sellD10 = EMPTY_FLOAT
+        self.askP1 = EMPTY_FLOAT
+        self.askP2 = EMPTY_FLOAT
+        self.askP3 = EMPTY_FLOAT
+        self.askP4 = EMPTY_FLOAT
+        self.askP5 = EMPTY_FLOAT
+        self.askP6 = EMPTY_FLOAT
+        self.askP7 = EMPTY_FLOAT
+        self.askP8 = EMPTY_FLOAT
+        self.askP9 = EMPTY_FLOAT
+        self.askP10 = EMPTY_FLOAT
+        self.askV1 = EMPTY_FLOAT
+        self.askV2 = EMPTY_FLOAT
+        self.askV3 = EMPTY_FLOAT
+        self.askV4 = EMPTY_FLOAT
+        self.askV5 = EMPTY_FLOAT
+        self.askV6 = EMPTY_FLOAT
+        self.askV7 = EMPTY_FLOAT
+        self.askV8 = EMPTY_FLOAT
+        self.askV9 = EMPTY_FLOAT
+        self.askV10 = EMPTY_FLOAT
+        self.askD1 = EMPTY_FLOAT
+        self.askD2 = EMPTY_FLOAT
+        self.askD3 = EMPTY_FLOAT
+        self.askD4 = EMPTY_FLOAT
+        self.askD5 = EMPTY_FLOAT
+        self.askD6 = EMPTY_FLOAT
+        self.askD7 = EMPTY_FLOAT
+        self.askD8 = EMPTY_FLOAT
+        self.askD9 = EMPTY_FLOAT
+        self.askD10 = EMPTY_FLOAT
 
 
 class TradeData(object):
     """成交数据类"""
+
     # ----------------------------------------------------------------------
     def __init__(self):
-        self.symbol = EMPTY_STRING          # 合约代码
-        self.tradeID = EMPTY_STRING         # 成交编号
-        self.orderID = EMPTY_STRING         # 订单编号
-        self.offset = EMPTY_UNICODE         # 成交开平仓
-        self.price = EMPTY_FLOAT            # 成交价格
-        self.volume = EMPTY_FLOAT           # 成交数量
-        self.tradeTime = EMPTY_STRING       # 成交时间
+        self.symbol = EMPTY_STRING                # 合约代码
+        self.tradeID = EMPTY_STRING               # 成交编号
+        self.orderID = EMPTY_STRING               # 订单编号
+        self.offset = EMPTY_UNICODE               # 成交开平仓
+        self.price = EMPTY_FLOAT                  # 成交价格
+        self.volume = EMPTY_FLOAT                 # 成交数量
+        self.tradeTime = EMPTY_STRING             # 成交时间
 
 
 class OrderData(object):
     """订单数据类"""
+
     # ----------------------------------------------------------------------
     def __init__(self):
-        self.symbol = EMPTY_STRING          # 合约代码
-        self.orderID = EMPTY_STRING         # 订单编号
-        self.offset = EMPTY_UNICODE         # 报单开平仓, u"开仓"
-        self.price = EMPTY_FLOAT            # 报单价格
-        self.volume = EMPTY_FLOAT           # 报单数量
-        self.orderTime = EMPTY_STRING       # 发单时间, "2018-10-10 19:00:00"
+        self.symbol = EMPTY_STRING  # 合约代码
+        self.orderID = EMPTY_STRING  # 订单编号
+        self.offset = EMPTY_UNICODE  # 报单开平仓, u"开仓"
+        self.price = EMPTY_FLOAT  # 报单价格
+        self.volume = EMPTY_FLOAT  # 报单数量
+        self.orderTime = EMPTY_STRING  # 发单时间, "2018-10-10 19:00:00"
 
 
 class AccountData(object):
     """账户数据类"""
+
     # ------------------------------------------------------------------
     def __init__(self, initCapital=1000000):
-        self.dt = None                          # 最新的时间, end_time
-        self.bar = None                         # 最新的K线
-        self.cash = initCapital                 # 最新现金值
-        self.deposit = EMPTY_FLOAT              # 保证金金额
-        self.pos = EMPTY_INT                    # 最新持仓数量
-        self.capital = initCapital              # 最新总资产
-        self.totalPnl = EMPTY_FLOAT             # 总利润(当前K线的)
-        self.commission = EMPTY_FLOAT           # 手续费(当前K线的)
-        self.slippage = EMPTY_FLOAT             # 滑点金额(当前K线的)
-        self.netPnl = EMPTY_FLOAT               # 净利润(当前K线的)
-        self.tradeTimes = EMPTY_FLOAT           # 交易次数(当前K线的)
+        self.date = None                      # 最新的时间, end_time
+        self.bar = None                       # 最新的K线
+        self.cash = initCapital               # 最新现金值
+        self.deposit = EMPTY_FLOAT            # 保证金金额
+        self.pos = EMPTY_INT                  # 最新持仓数量
+        self.capital = initCapital            # 最新总资产
+        self.totalPnl = EMPTY_FLOAT           # 总利润(当前K线的)
+        self.commission = EMPTY_FLOAT         # 手续费(当前K线的)
+        self.slippage = EMPTY_FLOAT           # 滑点金额(当前K线的)
+        self.netPnl = EMPTY_FLOAT             # 净利润(当前K线的)
+        self.tradeTimes = EMPTY_FLOAT         # 交易次数(当前K线的)
+        self.available = EMPTY_FLOAT          # 可用资金(当前K线的)
+
+
+class MultiAccountData(object):
+    """账户数据类"""
+
+    # ------------------------------------------------------------------
+    def __init__(self, initCapital=1000000):
+        self.date = None                      # 最新的时间
+        self.pos = None                       # 最新持仓数量
+        self.capital = initCapital            # 最新总资产
+        self.totalPnl = EMPTY_FLOAT           # 总利润(当前tick)
+        self.commission = EMPTY_FLOAT         # 手续费(当前tick)
+        self.slippage = EMPTY_FLOAT           # 滑点金额(当前tick)
+        self.netPnl = EMPTY_FLOAT             # 净利润(当前tick)
+        self.available = initCapital          # 可用资金(当前tick)
+
+
+class SubAccountData(object):
+    """账户数据类"""
+
+    # ------------------------------------------------------------------
+    def __init__(self):
+        self.date = None                             # 最新的时间, end_time
+        self.bar = None                              # 最新的K线
+        self.pos = EMPTY_INT                         # 最新持仓数量
+        self.totalPnl = EMPTY_FLOAT                  # 总利润(当前tick)
+        self.commission = EMPTY_FLOAT                # 手续费(当前tick)
+        self.slippage = EMPTY_FLOAT                  # 滑点金额(当前tick)
+        self.netPnl = EMPTY_FLOAT                    # 净利润(当前tick)
 
 
 class DailyResult(object):
     """日线结果对象"""
+
     # ----------------------------------------------------------------------
     def __init__(self, date):
         """初始化"""
-        self.date = date                    # 日期, date对象
-        self.closePrice = 0.0               # 当日收盘价
-        self.tradeCount = 0                 # 交易次数
-        self.closePosition = 0              # 收盘时的持仓
-        self.totalPnl = 0                   # 总盈亏
-        self.commission = 0                 # 手续费
-        self.slippage = 0                   # 滑点金额
-        self.netPnl = 0                     # 净盈亏
-        self.balance = 0                    # 总资产
+        self.date = date  # 日期, date对象
+        self.closePrice = 0.0  # 当日收盘价
+        self.tradeCount = 0  # 交易次数
+        self.closePosition = 0  # 收盘时的持仓
+        self.totalPnl = 0  # 总盈亏
+        self.commission = 0  # 手续费
+        self.slippage = 0  # 滑点金额
+        self.netPnl = 0  # 净盈亏
+        self.balance = 0  # 总资产
 
     # ----------------------------------------------------------------------
     def update(self, price, times, pos, totalPnl, commission, slippage, netPnl, balance):
-        self.closePrice = price            # 当日收盘价
-        self.tradeCount += times           # 累计成交次数
-        self.closePosition = pos           # 收盘时的持仓
-        self.totalPnl += totalPnl          # 总盈亏
-        self.commission += commission      # 累计手续费
-        self.slippage += slippage          # 累计滑点金额
-        self.netPnl += netPnl              # 累计净盈亏
-        self.balance = balance             # 总资产
+        self.closePrice = price  # 当日收盘价
+        self.tradeCount += times  # 累计成交次数
+        self.closePosition = pos  # 收盘时的持仓
+        self.totalPnl += totalPnl  # 总盈亏
+        self.commission += commission  # 累计手续费
+        self.slippage += slippage  # 累计滑点金额
+        self.netPnl += netPnl  # 累计净盈亏
+        self.balance = balance  # 总资产
+
+
+class DailyMultiResult(object):
+    """日线结果对象"""
+
+    # ----------------------------------------------------------------------
+    def __init__(self, date):
+        """初始化"""
+        self.date = date              # 日期, date对象
+        self.subClosePosition = {}    # 子账户收盘时的持仓
+        self.subTotalPnl = {}         # 子账户总盈亏
+        self.subCommission = {}       # 子账户手续费
+        self.subSlippage = {}         # 子账户滑点金额
+        self.subNetPnl = {}           # 子账户净盈亏
+
+    # ----------------------------------------------------------------------
+    def update(self, pos, subTotalPnl, subCommission, subSlippage, subNetPnl):
+        self.subClosePosition = pos                    # 子账户收盘时的持仓
+        self.subTotalPnl = subTotalPnl                 # 子账户总盈亏
+        self.subCommission = subCommission             # 子账户手续费
+        self.subSlippage = subSlippage                 # 子账户滑点金额
+        self.subNetPnl = subNetPnl                     # 子账户净盈亏
 
 
 class BarManager(object):
     """
     K线合成器，支持：n分钟K线合成Xn分钟K线
     """
+
     # ----------------------------------------------------------------------
     def __init__(self, aimFreq="1day", onUpperBar=None):
         """
@@ -106,11 +245,11 @@ class BarManager(object):
         (1) aimFreq: 要合成的K线周期, 包括:"5min","30min","1hour","1day","1week","1month"等
         (2) onUpperBar: 大级别K线的推送函数(在策略中定义好, 在这个实例中被调用)
         """
-        self.bar = None                       # lowerFreq的K线对象
-        self.last_bar = None                  # 上一个lowerFreq的K线对象
-        self.upperBar = None                  # 大级别K线对象
-        self.aimFreq = aimFreq                # 目标频率
-        self.onUpperBar = onUpperBar          # 大级别K线的回调函数
+        self.bar = None  # lowerFreq的K线对象
+        self.last_bar = None  # 上一个lowerFreq的K线对象
+        self.upperBar = None  # 大级别K线对象
+        self.aimFreq = aimFreq  # 目标频率
+        self.onUpperBar = onUpperBar  # 大级别K线的回调函数
         # K线周期分类
         if self.aimFreq.endswith("min"):
             self.type = "min"
@@ -145,7 +284,7 @@ class BarManager(object):
         self.upperBar.volume += float(bar.volume)
         # 小级别走完一次大级别判断
         is_end = False
-        dt_end = bar.end_time           # K线结束的时间戳,为整数时间点
+        dt_end = bar.end_time  # K线结束的时间戳,为整数时间点
         # 分钟线的情况
         if self.type == "min":
             is_end = not dt_end.minute % self.type_num
@@ -173,12 +312,13 @@ class ArrayManager(object):
     1. K线时间序列的维护
     2. 常用技术指标的计算
     """
+
     # ----------------------------------------------------------------------
     def __init__(self, size=100):
         """Constructor"""
-        self.count = 0          # 缓存计数
-        self.size = size        # 缓存大小
-        self.inited = False     # k线容器的开关
+        self.count = 0  # 缓存计数
+        self.size = size  # 缓存大小
+        self.inited = False  # k线容器的开关
         self.openArray = np.zeros(size)
         self.highArray = np.zeros(size)
         self.lowArray = np.zeros(size)
@@ -236,75 +376,3 @@ class ArrayManager(object):
         shape = a.shape[:-1] + (a.shape[-1] - window + 1, window)
         strides = a.strides + (a.strides[-1],)
         return np.lib.stride_tricks.as_strided(a, shape=shape, strides=strides)
-
-    # ----------------------------------------------------------------------
-    def sma(self, n, array=False):
-        """简单均线"""
-        result = talib.SMA(self.close, n)
-        if array:
-            return result
-        return result[-1]
-
-    # ----------------------------------------------------------------------
-    def std(self, n, array=False):
-        """标准差"""
-        result = talib.STDDEV(self.close, n)
-        if array:
-            return result
-        return result[-1]
-
-    # ----------------------------------------------------------------------
-    def cci(self, n, array=False):
-        """CCI指标"""
-        result = talib.CCI(self.high, self.low, self.close, n)
-        if array:
-            return result
-        return result[-1]
-
-    # ----------------------------------------------------------------------
-    def atr(self, n, array=False):
-        """ATR指标"""
-        result = talib.ATR(self.high, self.low, self.close, n)
-        if array:
-            return result
-        return result[-1]
-
-    # ----------------------------------------------------------------------
-    def rsi(self, n, array=False):
-        """RSI指标"""
-        result = talib.RSI(self.close, n)
-        if array:
-            return result
-        return result[-1]
-
-    # ----------------------------------------------------------------------
-    def kdj(self, n1, n2, n3, array=False):
-        """
-        KDJ指标, 其中n1为计算RSV的参数,
-        n2为计算k的参数, n3为计算d的参数,一般为(9,3,3)
-        """
-        k, d = talib.STOCH(self.high, self.low, self.close,
-                           fastk_period=n1, slowk_period=n2,
-                           slowk_matype=1, slowd_period=n3, slowd_matype=1)
-        j = 3 * k - 2 * d
-        if array:
-            return k, d, j
-        return k[-1], d[-1], j[-1]
-
-    # ----------------------------------------------------------------------
-    def macd(self, fastPeriod, slowPeriod, signalPeriod, array=False):
-        """MACD指标"""
-        macd, signal, hist = talib.MACD(self.close, fastPeriod,
-                                        slowPeriod, signalPeriod)
-        if array:
-            return macd, signal, hist
-        return macd[-1], signal[-1], hist[-1]
-
-    # ----------------------------------------------------------------------
-    def boll(self, n, dev, array=False):
-        """布林通道"""
-        mid = self.sma(n, array)
-        std = self.std(n, array)
-        up = mid + std * dev
-        down = mid - std * dev
-        return up, down, mid

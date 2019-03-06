@@ -23,16 +23,14 @@ date_list = ['20181224', '20181225', '20181226', '20181227', '20181228',
              '20190116', '20190117', '20190118', '20190121', '20190122',
              '20190123', '20190124', '20190125', '20190128', '20190129',
              '20190130', '20190131', '20190201']
-trading_days_address = r'H:\vnpyStockEngine\data_process\trading_days.json'
-# file_address = r'g:\20190124\shreportdata\shreport0.csv'
-trade_shdata_base = r'h:\vnpyStockEngine\data_process\sh_temp'
-trade_szdata_base = r'h:\vnpyStockEngine\data_process\sz_temp'
+trading_days_address = r'H:\jzquant_vnpy\data_process\data_path\trading_days.json'
 
-sh_address = r'H:\vnpyStockEngine\data_process\sh_stock_list.json'
-sz_address = r'H:\vnpyStockEngine\data_process\sz_stock_list.json'
 
-hs300_sh_address = r'H:\vnpyStockEngine\data_process\hs300_sh.json'
-hs300_sz_address = r'H:\vnpyStockEngine\data_process\hs300_sz.json'
+sh_address = r'H:\jzquant_vnpy\data_process\data_path\sh_stock_list.json'
+sz_address = r'H:\jzquant_vnpy\data_process\data_path\sz_stock_list.json'
 
-save_path = 'g:/l2_database/{}_data/{}'
+hs300_sh_address = r'H:\jzquant_vnpy\data_process\data_path\hs300_sh.json'
+hs300_sz_address = r'H:\jzquant_vnpy\data_process\data_path\hs300_sz.json'
+
+save_path = 'e:/l2_database/{}_data/{}'
 

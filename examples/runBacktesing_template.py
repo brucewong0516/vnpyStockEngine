@@ -25,6 +25,10 @@ if __name__ == '__main__':
     # 3、设置策略信息和参数
     # 设置策略基本信息
     """策略名称、市场、标的、频率"""
+    # setting = {"ClassName": "test",
+    #            "market": "crypto",
+    #            "symbol":"bitfinex_btc_usd",
+    #            "frequency": "1day"}
     setting = {"ClassName": "test",
                "market": "stock",
                "symbol": "000001.XSHG",

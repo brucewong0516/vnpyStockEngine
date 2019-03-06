@@ -3,30 +3,24 @@
 回测引擎, 实时计算模式, 只保存日线的资金序列
 """
 import os
-import time
 from datetime import datetime, timedelta
 from collections import OrderedDict
-from itertools import product
-import multiprocessing
 import pymongo
-import pandas as pd
 # 导入自定义的模块
 from backtest import constant as vc         # 常量模块
 from backtest import object as vo           # 对象模块
-from backtest.evaluation import Evaluation    # 评价指标计算对象
 
 
 class BacktestingEngine(object):
 
     TICK_MODE = 'tick'  # 数据模式，逐Tick回测
-    BAR_MODE = 'bar'    # 数据模式，逐Bar回测
 
     # ----------------------------------------------------------------------
     def __init__(self):
         # ------------------------------------------------------------------
         # 策略实例相关
         self.strategy = None            # 回测策略实例
-        self.strategy_name = ""         # 策略文件夹名称, 如: "Strategy_DoubleMA1_20180101_101515"
+        self.strategy_name = ""         # 策略文件夹名称
 
         # ------------------------------------------------------------------
         # 回测时间相关
@@ -195,7 +189,6 @@ class BacktestingEngine(object):
         # ------------------------------------------------------------------
         # 连接数据库
         collection = self.dbClient[self.dbName][self.symbol]
-        # collection.createIndex({'start_time': 1})
         dataClass = vo.BarData
         self.output(u'开始回测')
         # ------------------------------------------------------------------
@@ -266,20 +259,6 @@ class BacktestingEngine(object):
         self.limitOrderDict[orderID] = order
         # 返回委托代码
         return orderID
-
-    # # ----------------------------------------------------------------------
-    def cancelOrder(self, orderID):
-        """撤销单个限价委托单"""
-        if orderID in self.workingLimitOrderDict:
-            order = self.workingLimitOrderDict[orderID]
-            order.cancelTime = self.dt.strftime('%Y-%m-%d %H:%M:%S')
-            del self.workingLimitOrderDict[orderID]
-
-    # ----------------------------------------------------------------------
-    def cancelAll(self):
-        """全部撤单"""
-        for orderID in list(self.workingLimitOrderDict.keys()):
-            self.cancelOrder(orderID)
 
     # ----------------------------------------------------------------------
     # 撮合模块
@@ -373,187 +352,3 @@ class BacktestingEngine(object):
                                           self.account.commission, self.account.slippage,
                                           self.account.netPnl, self.account.capital)
 
-    # ----------------------------------------------------------------------
-    # 策略评价模块
-    # ----------------------------------------------------------------------
-    def runEvaluating(self, saving=False, plotting=False):
-        """策略评价"""
-        # 创建评价对象
-        self.evaluator = Evaluation()
-        # 设置参数
-        self.evaluator.set_data(self.tradeDict, self.dailyResultDict, self.account)  # 输入回测数据
-        self.evaluator.set_parameter(self.rate_commission, self.fixed_slippage, self.rate_slippage,
-                                     self.fixCommission, self.bar, self.initCapital)
-        # 计算交易结果
-        self.evaluator.cal_trade_result()
-        # 计算日线结果
-        self.evaluator.cal_daily_result()
-        # 保存日志的情况
-        if saving:
-            # 设置策略保存路径
-            self.strategySavingPath = os.path.abspath(os.path.join(self.get_logs_path(), self.strategy_name))
-            if not os.path.exists(self.strategySavingPath):
-                os.makedirs(self.strategySavingPath)
-            self.evaluator.set_path(self.strategySavingPath)
-        # 打印策略评价指标
-        self.evaluator.print_result()
-        if saving:
-            self.evaluator.export_result()
-        if plotting:
-            self.evaluator.plot()
-
-    # ----------------------------------------------------------------------
-    def runEvaluating_optimization(self):
-        """参数优化模式下, 策略快速评价"""
-        # 创建评价对象
-        self.evaluator = Evaluation()
-        # 设置参数
-        self.evaluator.set_data(self.tradeDict, self.dailyResultDict, self.account)       # 输入回测数据
-        self.evaluator.set_parameter(self.rate_commission, self.fixed_slippage, self.rate_slippage,
-                                     self.fixCommission, self.bar, self.initCapital)
-        # 计算日线结果
-        self.evaluator.cal_daily_result()
-
-    # ----------------------------------------------------------------------
-    # 参数优化模块
-    # ----------------------------------------------------------------------
-    def runParallelOptimization(self, strategyClass, optimizationSetting):
-        """并行优化参数"""
-        # 记录开始时间
-        t1 = time.time()
-
-        # 获取优化设置
-        settingList = optimizationSetting.generateSetting()
-        targetName = optimizationSetting.optimizeTarget
-
-        # 检查参数设置问题
-        if not settingList or not targetName:
-            self.output(u'优化设置有问题，请检查')
-
-        # 多进程优化，启动一个对应CPU核心数量的进程池
-        pool = multiprocessing.Pool(multiprocessing.cpu_count())
-        print(u"CPU核数:{}".format(multiprocessing.cpu_count()))
-        op_list = []
-        for setting in settingList:
-            op_list.append(pool.apply_async(optimize, (strategyClass, setting, targetName,
-                                            self.ipAddress, self.port, self.initCapital,
-                                            self.startDate, self.initDays, self.endDate,
-                                            self.strategyInfo)))
-
-        pool.close()
-        pool.join()
-
-        # 结果处理
-        resultList = [res.get() for res in op_list]
-        # 转化成df
-        df = pd.DataFrame(resultList)
-        df.sort_values(by=targetName, axis=0, ascending=False, inplace=True)
-        df.reset_index(drop=True, inplace=True)
-
-        # 保存到本地文件夹
-        # 设置参数优化保存路径
-        dtNow = datetime.now()
-        strategyName = "Optimization_{}_{}".format(dtNow.strftime("%Y%m%d"), dtNow.strftime("%H%M%S"))
-        strategySavingPath = os.path.abspath(os.path.join(self.get_logs_path(), strategyName))
-        # 如果不存在该路径则创建
-        if not os.path.exists(strategySavingPath):
-            os.makedirs(strategySavingPath)
-        # 保存参数优化结果excel
-        file_df = os.path.abspath(os.path.join(strategySavingPath, "Result.xlsx"))
-        df.to_excel(file_df, index=False)
-        # 保存策略基本信息
-        file_txt = os.path.abspath(os.path.join(strategySavingPath, "策略基本信息.txt"))
-        f = open(file_txt, "w")
-        f.write(u"策略名称: {}\n".format(self.strategyInfo["ClassName"]))
-        f.write(u"品种: {}\n".format(self.strategyInfo["symbol"]))
-        f.write(u"周期: {}\n".format(self.strategyInfo["frequency"]))
-        f.write(u"开始时间: {}, 结束时间: {}\n".format(self.startDate, self.endDate))
-        f.write(u"优化目标: {}\n".format(targetName))
-        f.write(u"参数组合:\n")
-        settingContent = u"{}".format(settingList)
-        settingContent = "},\n".join(settingContent.split("},"))
-        f.write(settingContent)
-        f.close()
-
-        print(df.head(10))   # 打印前几行
-        print(u"参数组合个数: {}".format(len(df)))
-        time_all = time.time() - t1
-        time_mean = time_all / len(df)
-        print(u"总耗时:{:.2f}s, 平均每组耗时:{:.2f}s".format(time_all,time_mean))
-
-
-class OptimizationSetting(object):
-    """优化设置"""
-    # ----------------------------------------------------------------------
-    def __init__(self):
-        """Constructor"""
-        self.paramDict = OrderedDict()
-        self.settingList = []
-        self.optimizeTarget = ''        # 优化目标字段
-
-    # ----------------------------------------------------------------------
-    def addParameter(self, name, start, end=None, step=None):
-        """增加优化参数"""
-        if end is None and step is None:
-            self.paramDict[name] = [start]
-            return
-        if end < start:
-            print(u'参数起始点必须不大于终止点')
-            return
-        if step <= 0:
-            print(u'参数布进必须大于0')
-            return
-        _list = []
-        param = start
-        while param <= end:
-            _list.append(param)
-            param += step
-        self.paramDict[name] = _list
-
-    # ----------------------------------------------------------------------
-    def generateSetting(self):
-        """生成优化参数组合"""
-        # 参数名的列表
-        nameList = list(self.paramDict.keys())
-        paramList = list(self.paramDict.values())
-
-        # 使用迭代工具生产参数对组合
-        # product创建一个迭代器，生成表示item1，item2等中的项目的笛卡尔积的元组，repeat是一个关键字参数，指定重复生成序列的次数。
-        productList = list(product(*paramList))
-
-        # 把参数对组合打包到一个个字典组成的列表中
-        settingList = []
-        for p in productList:
-            d = dict(zip(nameList, p))
-            settingList.append(d)
-
-        return settingList
-
-    # ----------------------------------------------------------------------
-    def setOptimizeTarget(self, target):
-        """设置优化目标字段"""
-        self.optimizeTarget = target
-
-
-def optimize(strategyClass, opSetting, targetName,
-             address, port, initalCapital,
-             startDate, initDays, endDate,
-             setting):
-    """多进程优化时跑在每个进程中运行的函数"""
-    engine = BacktestingEngine()                        # 创建单个回测实例
-    engine.setDatabase(address=address, port=port)      # 设置MongoDB数据库地址
-    engine.setInitCapital(initalCapital)                # 设置
-    engine.setStartDate(startDate, initDays)            # 策略开始日期, 往前加载多少天的数据
-    engine.setEndDate(endDate)                          # 策略结束日期
-    setting['d'] = opSetting                            # 添加某个策略参数
-    engine.setStrategySetting(setting)                  # 设置策略信息和参数
-    engine.runBacktesting(strategyClass)                # 跑回测
-    engine.runEvaluating_optimization()                 # 策略评价
-    # 尝试获取评价指标
-    try:
-        targetValue = engine.evaluator.evaluate_daily[targetName]
-    except KeyError:
-        targetValue = 0
-    # 这里将目标指标添加到setting中,并返回
-    opSetting[targetName] = targetValue
-    return opSetting

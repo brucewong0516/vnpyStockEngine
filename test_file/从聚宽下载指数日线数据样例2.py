@@ -42,10 +42,9 @@ def wash_data(df):
 if __name__ == '__main__':
     data = get_price('000001.XSHG', start_date='2010-01-01', end_date='2019-01-01')
     data = wash_data(data)
-    # client = pymongo.MongoClient("192.168.0.107", port=27017)
-    client = pymongo.MongoClient(port=27017)
+    client = pymongo.MongoClient("192.168.0.107", port=27017)
     db = client['stock_1day']
-    collection = db['000001.XSHG']
+    collection = db['000002.XSHG']
     data_list = list(data.T.to_dict().values())
     collection.insert_many(data_list)
 

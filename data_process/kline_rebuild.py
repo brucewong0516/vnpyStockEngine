@@ -5,7 +5,7 @@ import pandas as pd
 import warnings
 from data_process.log_auth import client
 from data_process.get_stock_tick import get_trans, get_wash_trans
-from data_process.get_stock_pool import get_stocks, get_trading_days
+from data_process.get_stock_params import get_stocks, get_trading_days
 from data_process.base_define import hs300_sh_address, hs300_sz_address, trading_days_address, save_path
 from data_process.plot_kline import ShowKline
 

@@ -9,7 +9,7 @@ from JZpyapi.JZpyapi.apis.tick_order import OrderData
 from JZpyapi.JZpyapi.apis.tick_trans import TransData
 
 from data_process.log_auth import client
-from data_process.get_stock_pool import get_stocks, get_trading_days
+from data_process.get_stock_params import get_stocks, get_trading_days
 from data_process.base_define import hs300_sh_address, hs300_sz_address, trading_days_address, save_path
 
 
@@ -69,7 +69,6 @@ def get_trans(client, start_time, end_time, stock, market_type):
     data = TransData.sync_request(client, start_time_stamp, end_time_stamp, stock, market_type)
     print('读取{}trans数据时间：{}'.format(stock, time.time() - t0))
     df = pd.DataFrame(list(data.msg))
-    # print('数据长度{}'.format(len(df)))
     return df
 
 
@@ -155,12 +154,14 @@ def get_wash_tick(df, market='SZ'):
     df.sort_values(by=['date'], ascending=True, inplace=True)
     # --------------------------------------------------------------------------------------------------------------
     # 委买委卖价调整
-    df[['averageBuy', 'averageSell',
+    df[['last_close', 'open', 'high', 'low', 'close',
+        'averageBuy', 'averageSell',
         'askP1', 'askP2', 'askP3', 'askP4', 'askP5',
         'askP6', 'askP7', 'askP8', 'askP9', 'askP10',
         'bidP1', 'bidP2', 'bidP3', 'bidP4', 'bidP5',
         'bidP6', 'bidP7', 'bidP8', 'bidP9', 'bidP10']] = \
-        df[['averageBuy', 'averageSell',
+        df[['last_close', 'open', 'high', 'low', 'close',
+            'averageBuy', 'averageSell',
             'askP1', 'askP2', 'askP3', 'askP4', 'askP5',
             'askP6', 'askP7', 'askP8', 'askP9', 'askP10',
             'bidP1', 'bidP2', 'bidP3', 'bidP4', 'bidP5',
@@ -349,13 +350,29 @@ def save_sz_data(stock_list, trading_days, save_path):
                 continue
 
 
+def get_last_tick_data(stock, trading_days):
+    tradingHMS = '100000'
+    for d in trading_days:
+        startTime = datetime.datetime.strptime(d + tradingHMS, '%Y%m%d%H%M%S')
+        endTime = datetime.datetime.strptime(d + tradingHMS, '%Y%m%d%H%M%S')
+        try:
+            """获取report数据"""
+            df = get_wash_tick(get_tick(client, startTime, endTime, stock, 1), market='SH')
+            print(df.iloc[-1, :])
+        except Exception as e:
+            print('{} is None'.format(stock))
+
+
 if __name__ == '__main__':
-    trading_days = get_trading_days(trading_days_address)
+    trading_days = get_trading_days(trading_days_address)  # [-5:]
+    trading_days = ['20181204', '20181205', '20181206', '20181207', '20181210', '20181211', '20181212',
+                    '20181213']
     sh_stock_list = get_stocks(hs300_sh_address)
     sz_stock_list = get_stocks(hs300_sz_address)
 
     t0 = time.time()
-    save_sh_data(sh_stock_list, trading_days, save_path)
-    save_sz_data(sz_stock_list, trading_days, save_path)
+    get_last_tick_data(sh_stock_list[0], trading_days)
+    # save_sh_data(sh_stock_list, trading_days, save_path)
+    # save_sz_data(sz_stock_list, trading_days, save_path)
     print(time.time()-t0)
 
